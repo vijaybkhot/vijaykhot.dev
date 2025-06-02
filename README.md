@@ -24,16 +24,6 @@ Welcome to my personal portfolio website — built with **Next.js 15**, **Tailwi
 - [tsParticles](https://particles.js.org/)
 - [Formspree](https://formspree.io/)
 
-## 📁 Project Structure
-
-src/
-├── app/                  # Next.js App Router structure
-│   ├── about/            # About page
-│   ├── contact/          # Contact page
-│   ├── work/             # Projects page
-├── components/           # Shared UI components (Navbar, Footer, etc.)
-├── public/               # Static assets like images, resume, favicon
-├── styles/               # Global styles and fonts
 
 ##  Getting Started
 

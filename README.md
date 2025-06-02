@@ -8,12 +8,12 @@ Welcome to my personal portfolio website — built with **Next.js 15**, **Tailwi
 
 ## Features
 
-- ⚡ **Fully Static** — Optimized for fast load times and deployed via static hosting.
-- 🎨 **Modern UI** — Clean and responsive design using Tailwind CSS.
-- 🌌 **Background Particles** — Aesthetic interactive particle effects using tsParticles.
-- 💼 **Work Section** — Project cards with details, GitHub links, live demos, and YouTube previews.
-- 📩 **Contact Form** — Fully functional form powered by [Formspree](https://formspree.io).
-- 📄 **Downloadable Resume** — Easily accessible resume with external link or direct download.
+- **Fully Static** — Optimized for fast load times and deployed via static hosting.
+- **Modern UI** — Clean and responsive design using Tailwind CSS.
+- **Background Particles** — Aesthetic interactive particle effects using tsParticles.
+- **Work Section** — Project cards with details, GitHub links, live demos, and YouTube previews.
+- **Contact Form** — Fully functional form powered by [Formspree](https://formspree.io).
+- **Downloadable Resume** — Easily accessible resume with external link or direct download.
 
 ## Tech Stack
 

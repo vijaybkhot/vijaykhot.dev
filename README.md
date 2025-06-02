@@ -31,22 +31,24 @@ Welcome to my personal portfolio website — built with **Next.js 15**, **Tailwi
 
 ```bash
 git clone https://github.com/yourusername/vijaykhot.dev.git
+```
+```bash
 cd vijaykhot.dev
 ```
 
 2.	**Install dependencies**
-
+```bash
 npm install
-
+```
 3.	**Run locally**
-
+```bash
 npm run dev
-
+```
 4.	**Build for production**
-
+```bash
 npm run build
 npm run start
-
+```
 
 ### License
 

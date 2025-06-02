@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# vijaykhot.dev
 
-## Getting Started
+Welcome to my personal portfolio website — built with **Next.js 15**, **Tailwind CSS**, and **TypeScript** — where I showcase my work, background, and projects. Designed to be fast, responsive, and easily maintainable, this portfolio highlights who I am as a developer and what I’m passionate about.
 
-First, run the development server:
+## Live Demo
+
+[https://vijaykhot.dev](https://vijaykhot.dev)
+
+## Features
+
+- ⚡ **Fully Static** — Optimized for fast load times and deployed via static hosting.
+- 🎨 **Modern UI** — Clean and responsive design using Tailwind CSS.
+- 🌌 **Background Particles** — Aesthetic interactive particle effects using tsParticles.
+- 💼 **Work Section** — Project cards with details, GitHub links, live demos, and YouTube previews.
+- 📩 **Contact Form** — Fully functional form powered by [Formspree](https://formspree.io).
+- 📄 **Downloadable Resume** — Easily accessible resume with external link or direct download.
+
+## Tech Stack
+
+- [Next.js 15](https://nextjs.org/)
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [tsParticles](https://particles.js.org/)
+- [Formspree](https://formspree.io/)
+
+## 📁 Project Structure
+
+src/
+├── app/                  # Next.js App Router structure
+│   ├── about/            # About page
+│   ├── contact/          # Contact page
+│   ├── work/             # Projects page
+├── components/           # Shared UI components (Navbar, Footer, etc.)
+├── public/               # Static assets like images, resume, favicon
+├── styles/               # Global styles and fonts
+
+##  Getting Started
+
+1. **Clone the repository**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/vijaykhot.dev.git
+cd vijaykhot.dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.	**Install dependencies**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3.	**Run locally**
 
-## Learn More
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+4.	**Build for production**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+npm run build
+npm run start
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+⸻
+
+Built by Vijay Khot

@@ -17,12 +17,13 @@ Welcome to my personal portfolio website — built with **Next.js 15**, **Tailwi
 
 ## Tech Stack
 
-- [Next.js 15](https://nextjs.org/)
-- [React](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [tsParticles](https://particles.js.org/)
-- [Formspree](https://formspree.io/)
+- [Next.js 15](https://nextjs.org/) – React framework for building fast, modern web apps
+- [React](https://react.dev/) – UI library for building interactive user interfaces
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for rapid UI development
+- [TypeScript](https://www.typescriptlang.org/) – Typed superset of JavaScript
+- [Framer Motion](https://www.framer.com/motion/) – Library for declarative animations in React
+- [tsParticles](https://particles.js.org/) – Particle animations for backgrounds
+- [Formspree](https://formspree.io/) – Serverless form submission for contact forms
 
 
 ##  Getting Started

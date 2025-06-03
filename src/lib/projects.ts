@@ -51,7 +51,7 @@ export const projects = [
     tech: ["Next.js", "React", "Tailwind CSS", "SpaceX API", "Vercel"],
     image: "/projects/spacex-explorer.png",
     github: "https://github.com/vijaybkhot/SpaceX-Explorer",
-    live: "",
+    live: "https://space-x-explorer-beta.vercel.app/",
     youtube: "",
     labels: ["Course Project"],
   },

@@ -28,23 +28,22 @@ export default function AboutPage() {
           <hr className="w-full my-4 border-t-2 border-slate-700" />
 
           <p className="w-full mb-6 text-lg leading-relaxed text-slate-300">
-            I&apos;m a{" "}
-            <span className="font-medium text-white">software developer</span>{" "}
-            with a unique background in{" "}
+            I recently earned my Master’s in Computer Science from Stevens
+            Institute of Technology, where I developed my skills in{" "}
             <span className="font-medium text-white">
-              Civil Engineering and Sciences
+              software engineering, web development, and machine learning
             </span>
-            , and several years of industry experience. A recent graduate of the
-            Master’s in Computer Science program at Stevens Institute of
-            Technology, I built a strong foundation in software engineering and
-            web development through both coursework and self-learning. Along the
-            way, I’ve worked on multiple individual and team projects, gaining
-            hands-on experience with{" "}
+            . I&apos;m a quick learner and a strong team player, having
+            collaborated on{" "}
+            <span className="font-medium text-white">
+              multiple individual and group projects
+            </span>{" "}
+            that brought real-world ideas to life using{" "}
             <span className="font-medium text-white">
               React, Next.js, Node.js, and MongoDB
             </span>
-            . I love turning ideas into scalable solutions and continuously
-            explore new tools to grow as an engineer.
+            . I thrive in collaborative environments, love tackling new
+            challenges, and enjoy turning ideas into impactful experiences.
           </p>
           <p className="w-full mb-6 text-lg leading-relaxed text-slate-300">
             To strengthen my problem-solving skills, I regularly practice coding
@@ -63,12 +62,12 @@ export default function AboutPage() {
           </h2>
 
           <p className="w-full mb-6 text-lg leading-relaxed text-slate-300">
-            Before transitioning into software development, I spent nearly seven
-            years in Civil Engineering, managing complex projects and developing
-            a strong foundation in structured problem-solving and team
-            collaboration. My growing interest in technology and its potential
-            to improve real-world systems inspired me to transition and pursue a
-            Master&apos;s in Computer Science.
+            Before moving into software development, I spent nearly seven years
+            in Civil Engineering, where I led complex projects and built a solid
+            foundation in structured problem-solving and team collaboration. A
+            growing interest in technology and its potential to transform
+            real-world systems led me to pursue a Master&apos;s in Computer
+            Science.
           </p>
 
           <p className="w-full mb-6 text-lg leading-relaxed text-slate-300">

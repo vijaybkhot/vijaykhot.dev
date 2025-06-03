@@ -11,22 +11,35 @@ export default function PageTransition({
   const pathname = usePathname();
 
   return (
-    <div className="relative perspective-3d overflow-hidden">
+    <div className="relative overflow-hidden">
       <AnimatePresence mode="wait">
-        <motion.div
-          key={pathname}
-          initial={{ rotateY: 90, scale: 0.98, opacity: 0 }}
-          animate={{ rotateY: 0, scale: 1, opacity: 1 }}
-          exit={{ rotateY: -90, scale: 0.98, opacity: 0 }}
-          transition={{ duration: 0.6, ease: [0.83, 0, 0.17, 1] }}
-          className="w-full h-full"
-          style={{
-            transformStyle: "preserve-3d",
-            backfaceVisibility: "hidden",
-          }}
-        >
-          {children}
-        </motion.div>
+        <div className="relative overflow-hidden shadow-xl shadow-black/10 rounded-xl">
+          <motion.div
+            key={pathname}
+            initial={{
+              opacity: 0,
+              y: 30,
+              scale: 0.98,
+              filter: "blur(4px)",
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              filter: "blur(0px)",
+            }}
+            exit={{
+              opacity: 0,
+              y: -30,
+              scale: 0.98,
+              filter: "blur(4px)",
+            }}
+            transition={{ duration: 0.75, ease: [0.33, 1, 0.68, 1] }}
+            className="w-full h-full"
+          >
+            {children}
+          </motion.div>
+        </div>
       </AnimatePresence>
     </div>
   );

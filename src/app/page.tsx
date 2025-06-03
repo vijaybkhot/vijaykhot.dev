@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <BackgroundParticles />
-      <main className="px-6 py-16 sm:px-20 text-center sm:text-left">
+      <main className="px-6 py-16 text-center sm:px-20 sm:text-left">
         <Hero />
       </main>
     </>

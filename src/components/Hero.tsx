@@ -1,11 +1,12 @@
 "use client";
 
+import ButtonLink from "./ButtonLink";
+
 const Hero = () => {
   return (
     <section
       className="max-w-4xl px-4 py-24 mx-auto text-center sm:text-left sm:px-0"
       aria-label="Introduction section"
-      // Removed background color to make particles visible
       style={{
         color: "#ffffff",
       }}
@@ -28,6 +29,19 @@ const Hero = () => {
         I build fast, scalable, and intuitive web apps using React, Next.js, and
         Node.js.
       </p>
+      <div className="flex flex-col justify-center gap-4 sm:flex-row sm:justify-start">
+        <ButtonLink
+          href="/work"
+          label="Explore My Projects"
+          variant="primary"
+        />
+        <ButtonLink
+          href="https://leetcode.com/u/vijay_khot/"
+          label="View My LeetCode Stats"
+          variant="primary"
+        />
+        <ButtonLink href="/contact" label="Contact Me" variant="outlined" />{" "}
+      </div>
     </section>
   );
 };

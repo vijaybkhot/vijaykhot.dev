@@ -60,11 +60,11 @@ export const projects = [
     title: "Harmony Hub",
     featured: true,
     description:
-      "An interactive music management app with full CRUD and search for artists, albums, companies, and songs.",
+      "A solo-built interactive music management app with full CRUD and search features for artists, albums, companies, and songs.",
     contribution:
-      "Developed the entire frontend, integrated GraphQL queries and mutations, designed modals for CRUD, and built a dynamic search interface.",
+      "Currently migrating the frontend to Next.js for better routing and performance. Previously developed the entire React frontend, integrated GraphQL queries and mutations, and built dynamic modals and search interface.",
     tech: [
-      "React",
+      "Next.js",
       "GraphQL",
       "Apollo Client",
       "Redis",
@@ -76,7 +76,7 @@ export const projects = [
     github: "https://github.com/vijaybkhot/harmony-hub",
     live: "",
     youtube: "",
-    labels: ["Course Project"],
+    labels: ["Solo Project", "In Progress"],
   },
   {
     title: "Sprint2Health",

@@ -29,7 +29,9 @@ export default function AboutPage() {
 
           <p className="w-full mb-6 text-lg leading-relaxed text-slate-300">
             I recently earned my Master’s in Computer Science from Stevens
-            Institute of Technology, where I developed my skills in{" "}
+            Institute of Technology
+            <span className="font-medium text-white"> (GPA: 3.97)</span>, where
+            I developed my skills in{" "}
             <span className="font-medium text-white">
               software engineering, web development, and machine learning
             </span>
@@ -62,12 +64,18 @@ export default function AboutPage() {
           </h2>
 
           <p className="w-full mb-6 text-lg leading-relaxed text-slate-300">
-            Before moving into software development, I spent nearly seven years
-            in Civil Engineering, where I led complex projects and built a solid
-            foundation in structured problem-solving and team collaboration. A
-            growing interest in technology and its potential to transform
-            real-world systems led me to pursue a Master&apos;s in Computer
-            Science.
+            Before transitioning into software development, I spent nearly seven
+            years working as a Civil Engineer, where I successfully led and
+            executed multiple large-scale government housing projects. During my
+            time as a Project Engineer, I often leveraged technology—using tools
+            like Excel and Python libraries such as{" "}
+            <span className="font-medium text-white">
+              NumPy, Matplotlib, and Pandas
+            </span>
+            —to analyze site data and generate performance reports. These
+            experiences sparked a deep interest in tech and data-driven systems,
+            ultimately inspiring me to take a bold leap and pursue a Master’s in
+            Computer Science to fully embrace a career in software development.
           </p>
 
           <p className="w-full mb-6 text-lg leading-relaxed text-slate-300">

@@ -123,7 +123,7 @@ export const techIcons = [
   {
     name: "Redis",
     icon: <SiRedis className="text-red-500" />,
-    featured: false,
+    featured: true,
   },
 
   // DevOps & Cloud

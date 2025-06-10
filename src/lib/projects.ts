@@ -26,19 +26,30 @@ export const projects = [
     youtube: "https://www.youtube.com/embed/p43tNK85-wU?si=r98Xb3QGLUg4Bk6Q",
     labels: ["Team Project", "Best Project"],
   },
+
   {
-    title: "ServiceEasy",
+    title: "NexTune",
     featured: true,
     description:
-      "An app for booking device repair services with location-based store discovery, search, and a streamlined booking experience.",
+      "A solo-built interactive music management app with full CRUD and search features for artists, albums, companies, and songs.",
     contribution:
-      "Led development, designed data models, and built backend workflows for customers, employees, managers, and admins.",
-    tech: ["Node.js", "Express", "MongoDB", "Leaflet", "Stripe", "JWT Auth"],
-    image: "/projects/serviceeasy.png",
-    github: "https://github.com/vijaykhot/serviceeasy",
-    live: "https://serviceeasy.onrender.com/",
-    youtube: "https://www.youtube.com/embed/QGSx0CbL9QA?si=woEGIoN89NQadzXU",
-    labels: ["Team Project"],
+      "Migrating the frontend to Next.js with TypeScript for improved maintainability and type safety. Deployed on Vercel (frontend) and Render (backend); initial load may take a few seconds due to free hosting. Previously built the full React frontend, integrated GraphQL APIs.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "GraphQL",
+      "Apollo Client",
+      "Redis",
+      "Node.js",
+      "Express",
+      "Tailwind CSS",
+    ],
+    image: "/projects/harmony-hub.png",
+    github: "https://github.com/vijaybkhot/NexTune",
+    live: "https://nex-tune.vercel.app",
+    youtube: "",
+    labels: ["Solo Project", "In Progress"],
   },
 
   {
@@ -55,29 +66,21 @@ export const projects = [
     youtube: "",
     labels: ["Course Project"],
   },
-
   {
-    title: "Harmony Hub",
+    title: "ServiceEasy",
     featured: true,
     description:
-      "A solo-built interactive music management app with full CRUD and search features for artists, albums, companies, and songs.",
+      "An app for booking device repair services with location-based store discovery, search, and a streamlined booking experience.",
     contribution:
-      "Currently migrating the frontend to Next.js for better routing and performance. Previously developed the entire React frontend, integrated GraphQL queries and mutations, and built dynamic modals and search interface.",
-    tech: [
-      "Next.js",
-      "GraphQL",
-      "Apollo Client",
-      "Redis",
-      "Node.js",
-      "Express",
-      "Tailwind CSS",
-    ],
-    image: "/projects/harmony-hub.png",
-    github: "https://github.com/vijaybkhot/harmony-hub",
-    live: "",
-    youtube: "",
-    labels: ["Solo Project", "In Progress"],
+      "Led development, designed data models, and built backend workflows for customers, employees, managers, and admins.",
+    tech: ["Node.js", "Express", "MongoDB", "Leaflet", "Stripe", "JWT Auth"],
+    image: "/projects/serviceeasy.png",
+    github: "https://github.com/vijaykhot/serviceeasy",
+    live: "https://serviceeasy.onrender.com/",
+    youtube: "https://www.youtube.com/embed/QGSx0CbL9QA?si=woEGIoN89NQadzXU",
+    labels: ["Team Project"],
   },
+
   {
     title: "Sprint2Health",
     featured: true,

@@ -1,7 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
 
-import BackgroundParticles from "@/components/BackgroundParticles";
 import { projects } from "@/lib/projects";
 const ProjectCard = dynamic(() => import("@/components/ProjectCard"), {
   ssr: false,
@@ -12,16 +11,14 @@ const featuredProjects = projects.filter((project) => project.featured);
 const WorkPage = () => {
   return (
     <>
-      <BackgroundParticles />
-
       <main className="relative px-6 py-24 mx-auto max-w-7xl">
-        <div className="mb-16 text-center">
+        <div className="mb-8 text-center">
           <h1 className="mb-4 text-5xl font-extrabold text-blue-500">
             Crafted with Code & Purpose
           </h1>
           <p className="max-w-2xl mx-auto text-lg leading-relaxed text-slate-300">
-            Explore a curated collection of full-stack projects—each built with
-            thoughtful design, clean code, and real-world utility.
+            Some of the full-stack applications I have contributed to build,
+            both independently and as part of a team.
           </p>
         </div>
 

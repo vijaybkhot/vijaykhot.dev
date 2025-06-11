@@ -1,6 +1,5 @@
 "use client";
 import dynamic from "next/dynamic";
-import BackgroundParticles from "@/components/BackgroundParticles";
 import ButtonLink from "@/components/ButtonLink";
 
 const Skills = dynamic(() => import("@/components/Skills"), {
@@ -10,8 +9,6 @@ const Skills = dynamic(() => import("@/components/Skills"), {
 export default function AboutPage() {
   return (
     <>
-      <BackgroundParticles />
-
       <main className="min-h-screen bg-brand text-slate-100">
         <section className="max-w-6xl px-6 py-24 mx-auto sm:px-20">
           {/* Header */}

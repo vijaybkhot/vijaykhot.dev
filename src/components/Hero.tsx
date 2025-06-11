@@ -5,7 +5,7 @@ import ButtonLink from "./ButtonLink";
 const Hero = () => {
   return (
     <section
-      className="max-w-4xl px-4 mx-auto text-center py-18 sm:text-left sm:px-0"
+      className="max-w-4xl px-4 py-16 mx-auto text-center sm:text-left sm:px-0"
       aria-label="Introduction section"
       style={{
         color: "#ffffff",

@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageArrows from "@/components/PageArrow";
+import BackgroundParticles from "@/components/BackgroundParticles";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,19 +31,22 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body
-        className={`min-h-screen flex flex-col bg-[#0f172a] text-white ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`h-full bg-[#0f172a] text-white ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* 3D container */}
         <div
-          className="relative overflow-hidden"
-          style={{ perspective: "1200px" }} // Or use a Tailwind utility like `perspective-3d`
+          className="relative flex flex-col min-h-screen overflow-hidden"
+          style={{ perspective: "1200px" }}
         >
-          <PageTransition>
-            <Navbar />
-            <PageArrows />
-            {children}
-            <Footer />
-          </PageTransition>
+          <Navbar />
+
+          <PageArrows />
+
+          <main className="flex-1">
+            <BackgroundParticles />
+            <PageTransition>{children}</PageTransition>
+          </main>
+
+          <Footer />
         </div>
       </body>
     </html>

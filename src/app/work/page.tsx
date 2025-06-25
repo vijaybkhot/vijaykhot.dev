@@ -14,11 +14,11 @@ const WorkPage = () => {
       <main className="relative px-6 py-24 mx-auto max-w-7xl">
         <div className="mb-8 text-center">
           <h1 className="mb-4 text-5xl font-extrabold text-blue-500">
-            Crafted with Code & Purpose
+            Selected Full-Stack Projects: Built & Collaborated
           </h1>
           <p className="max-w-2xl mx-auto text-lg leading-relaxed text-slate-300">
-            Some of the full-stack applications I have contributed to build,
-            both independently and as part of a team.
+            Projects spanning solo builds and team efforts, crafted with a focus
+            on usability, performance, and clarity.
           </p>
         </div>
 

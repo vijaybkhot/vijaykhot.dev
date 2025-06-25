@@ -24,11 +24,15 @@ import {
   SiHtml5,
   SiCss3,
   SiHandlebarsdotjs,
+  SiSupabase,
+  SiFigma,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FiBell } from "react-icons/fi";
 import { TbBrandVercelFilled } from "react-icons/tb";
+import Image from "next/image";
+import { BsFiletypeJson } from "react-icons/bs";
 
 export const techIcons = [
   // Core Languages
@@ -81,6 +85,11 @@ export const techIcons = [
   {
     name: "Express",
     icon: <SiExpress className="text-gray-700 dark:text-gray-300" />,
+    featured: true,
+  },
+  {
+    name: "Supabase",
+    icon: <SiSupabase className="text-[#3FCF8E]" />,
     featured: true,
   },
   {
@@ -178,6 +187,32 @@ export const techIcons = [
   {
     name: "VS Code",
     icon: <VscVscode className="text-blue-500" />,
+    featured: false,
+  },
+  {
+    name: "Figma",
+    icon: <SiFigma className="text-[#F24E1E]" />,
+    featured: false,
+  },
+  {
+    name: "Bolt",
+    icon: (
+      <Image
+        src="/icons/bolt.webp"
+        alt="Bolt Icon"
+        width={24}
+        height={24}
+        className="object-contain"
+        loading="lazy"
+      />
+    ),
+    featured: false,
+  },
+
+  // Data & Formats
+  {
+    name: "JSON",
+    icon: <BsFiletypeJson className="text-blue-500" />,
     featured: false,
   },
 ];

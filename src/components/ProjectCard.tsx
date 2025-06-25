@@ -17,6 +17,7 @@ type Project = {
   contribution?: string;
   featured?: boolean;
   courseProject?: boolean;
+  labels?: string[];
 };
 
 const ProjectCard: FC<{ project: Project }> = ({ project }) => {
@@ -71,6 +72,33 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
 
       {/* Title & Description */}
       <h3 className="mb-2 text-xl font-semibold text-white">{project.title}</h3>
+      {/* Labels */}
+      {project.labels && project.labels.length > 0 && (
+        <div className="flex flex-wrap gap-2 mb-3">
+          {project.labels.map((label) => (
+            <span
+              key={label}
+              className={`inline-block px-3 py-1 text-xs font-semibold rounded-full
+          ${
+            label.toLowerCase().includes("team")
+              ? "bg-blue-600 text-white"
+              : label.toLowerCase().includes("solo") ||
+                label.toLowerCase().includes("individual")
+              ? "bg-green-600 text-white"
+              : label.toLowerCase().includes("hci") ||
+                label.toLowerCase().includes("ui/ux")
+              ? "bg-purple-600 text-white"
+              : label.toLowerCase().includes("course")
+              ? "bg-yellow-600 text-white"
+              : "bg-gray-600 text-white"
+          }
+        `}
+            >
+              {label}
+            </span>
+          ))}
+        </div>
+      )}
       <p className={`text-slate-300 mb-2 ${!expanded ? "line-clamp-2" : ""}`}>
         {project.description}
       </p>
@@ -91,7 +119,15 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
       {/* Contribution */}
       {project.contribution && (
         <p className="mb-3 text-sm italic text-slate-400">
-          <span className="font-medium text-blue-400">My Role:</span>{" "}
+          <span className="font-medium text-blue-400">
+            {project.labels?.some(
+              (label) =>
+                label.toLowerCase().includes("solo") ||
+                label.toLowerCase().includes("individual")
+            )
+              ? "What I built:"
+              : "My Role:"}
+          </span>{" "}
           {project.contribution}
         </p>
       )}

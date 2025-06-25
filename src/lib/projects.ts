@@ -1,5 +1,31 @@
 export const projects = [
   {
+    title: "NexTune",
+    featured: true,
+    description:
+      "A solo-built interactive music management app with full CRUD and search features for artists, albums, companies, and songs.",
+    contribution:
+      "Independently built the full React frontend with GraphQL APIs. Migrated to Next.js with TypeScript for better maintainability and type safety. Now creating a Docker image to host on AWS. Deployed on Vercel (frontend) and Render (backend); initial load may take a few seconds due to free hosting.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "GraphQL",
+      "Apollo Client",
+      "Redis",
+      "Node.js",
+      "Express",
+      "Tailwind CSS",
+      "Docker",
+      "AWS",
+    ],
+    image: "/projects/harmony-hub.png",
+    github: "https://github.com/vijaybkhot/NexTune",
+    live: "https://nex-tune.vercel.app",
+    youtube: "",
+    labels: ["Solo Project", "In Progress"],
+  },
+  {
     title: "eVoltzo",
     featured: true,
     description:
@@ -28,28 +54,26 @@ export const projects = [
   },
 
   {
-    title: "NexTune",
+    title: "Better Food Logs",
     featured: true,
     description:
-      "A solo-built interactive music management app with full CRUD and search features for artists, albums, companies, and songs.",
+      "A frictionless food logging app focused on simplicity, speed, and meaningful tracking—designed to avoid the clutter of legacy apps and help users build consistent habits.",
     contribution:
-      "Migrating the frontend to Next.js with TypeScript for improved maintainability and type safety. Deployed on Vercel (frontend) and Render (backend); initial load may take a few seconds due to free hosting. Previously built the full React frontend, integrated GraphQL APIs.",
+      "Worked on Supabase storage integration, user authentication, syncing between local and Supabase storage, and robust input validation logic.",
     tech: [
       "Next.js",
-      "React",
       "TypeScript",
-      "GraphQL",
-      "Apollo Client",
-      "Redis",
-      "Node.js",
-      "Express",
+      "Supabase",
+      "PostgreSQL",
       "Tailwind CSS",
+      "Vercel",
+      "Bolt",
     ],
-    image: "/projects/harmony-hub.png",
-    github: "https://github.com/vijaybkhot/NexTune",
-    live: "https://nex-tune.vercel.app",
+    image: "/projects/better-food-logs.png",
+    github: "https://github.com/Bediruna/hackathon-better-food-logs",
+    live: "https://hackathon-better-food-logs.vercel.app/",
     youtube: "",
-    labels: ["Solo Project", "In Progress"],
+    labels: ["Team Project", "Hackathon Project"],
   },
 
   {
@@ -64,8 +88,9 @@ export const projects = [
     github: "https://github.com/vijaybkhot/SpaceX-Explorer",
     live: "https://space-x-explorer-beta.vercel.app/",
     youtube: "",
-    labels: ["Course Project"],
+    labels: ["Solo Project"],
   },
+
   {
     title: "ServiceEasy",
     featured: true,
@@ -78,7 +103,7 @@ export const projects = [
     github: "https://github.com/vijaykhot/serviceeasy",
     live: "https://serviceeasy.onrender.com/",
     youtube: "https://www.youtube.com/embed/QGSx0CbL9QA?si=woEGIoN89NQadzXU",
-    labels: ["Team Project"],
+    labels: ["Team Project", "Course Project", "Web Programming"],
   },
 
   {
@@ -103,19 +128,20 @@ export const projects = [
     github: "https://github.com/harsh9802/sprint-to-health",
     live: "",
     youtube: "https://www.youtube.com/embed/pbw8xyw-jNU?si=1E85dZcLdPQXHDG4",
-    labels: ["Team Project"],
+    labels: ["Team Project", "Course Project", "Agile Development"],
   },
   {
     title: "Campus Pulse",
-    featured: false,
+    featured: true,
     description:
-      "A student-focused platform for discovering and participating in university events and clubs.",
+      "A student-centered platform focused on intuitive discovery and engagement with university events and clubs, emphasizing seamless user experience and interaction design.",
     contribution:
-      "Built secure authentication and backend APIs as part of a collaborative team project.",
-    tech: ["React", "Express", "MongoDB", "JWT"],
+      "Led UI/UX design and user research to ensure an engaging, accessible experience. Created interactive prototypes and collaborated closely on usability testing and feedback-driven improvements.",
+    tech: ["React", "Express", "MongoDB", "Figma"],
     image: "/projects/campuspulse.png",
     github: "https://github.com/vijaykhot/campus-pulse",
-    labels: ["Team Project"],
+    youtube: "https://www.youtube.com/embed/whcI4JllTRQ",
+    labels: ["Team Project", "Course Project", "HCI", "UI/UX"],
   },
   {
     title: "Natours",

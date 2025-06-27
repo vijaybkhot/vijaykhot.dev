@@ -71,7 +71,7 @@ export const projects = [
     ],
     image: "/projects/better-food-logs.png",
     github: "https://github.com/Bediruna/hackathon-better-food-logs",
-    live: "https://hackathon-better-food-logs.vercel.app/",
+    live: "https://www.betterfoodlogs.com/",
     youtube: "",
     labels: ["Team Project", "Hackathon Project"],
   },

@@ -5,10 +5,9 @@ export const projects = [
     description:
       "A solo-built interactive music management app with full CRUD and search features for artists, albums, companies, and songs.",
     contribution:
-      "Independently built the full React frontend with GraphQL APIs. Migrated to Next.js with TypeScript for better maintainability and type safety. Now creating a Docker image to host on AWS. Deployed on Vercel (frontend) and Render (backend); initial load may take a few seconds due to free hosting.",
+      "Independently built the full frontend with Next.js and TypeScript for maintainability and type safety. Developed GraphQL APIs with Apollo Client and integrated Redis caching. Currently creating a Docker image for AWS deployment. Hosted on Vercel (frontend) and Render (backend); initial load may take a few seconds due to free hosting.",
     tech: [
       "Next.js",
-      "React",
       "TypeScript",
       "GraphQL",
       "Apollo Client",

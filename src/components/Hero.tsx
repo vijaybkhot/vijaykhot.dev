@@ -22,15 +22,15 @@ const Hero = () => {
         className="mb-6 text-2xl font-medium sm:text-3xl"
         style={{ color: "#60A5FA" }}
       >
-        Full-Stack Web Developer & Problem Solver
+        Backend-Focused Software Engineer & Problem Solver
       </h2>
 
       <p
         className="max-w-2xl mb-10 text-lg leading-relaxed"
         style={{ color: "#cbd5e1" }}
       >
-        I build fast, scalable, and intuitive web apps using React, Next.js, and
-        Node.js.
+        I build fast, scalable web applications using Next.js, Node.js, and
+        GraphQL—focused on performance and developer experience.
       </p>
       <div className="flex flex-col justify-center gap-4 sm:flex-row sm:justify-start">
         <ButtonLink

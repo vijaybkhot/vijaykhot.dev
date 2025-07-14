@@ -19,8 +19,8 @@ export default function AboutPage() {
           <h2 className="w-full mb-6 text-2xl font-semibold leading-snug sm:text-3xl text-slate-100">
             I&apos;m{" "}
             <span className="font-semibold text-blue-400">Vijay Khot</span> — a
-            software developer with a passion for building impactful,
-            user-focused technologies.
+            backend-focused software engineer passionate about building
+            scalable, user-focused systems.
           </h2>
           <hr className="w-full my-4 border-t-2 border-slate-700" />
 
@@ -39,7 +39,7 @@ export default function AboutPage() {
             </span>{" "}
             that brought real-world ideas to life using{" "}
             <span className="font-medium text-white">
-              React, Next.js, Node.js, and MongoDB
+              using Node.js, GraphQL, MongoDB, Next.js, and React.
             </span>
             . I thrive in collaborative environments, love tackling new
             challenges, and enjoy turning ideas into impactful experiences.

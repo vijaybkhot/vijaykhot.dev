@@ -26,7 +26,9 @@ import {
   SiHandlebarsdotjs,
   SiSupabase,
   SiFigma,
+  SiPrisma,
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FiBell } from "react-icons/fi";
@@ -49,6 +51,11 @@ export const techIcons = [
   {
     name: "Python",
     icon: <SiPython className="text-blue-400" />,
+    featured: true,
+  },
+  {
+    name: "Java",
+    icon: <FaJava className="text-[#ED8B00]" />,
     featured: true,
   },
 
@@ -122,12 +129,17 @@ export const techIcons = [
   {
     name: "Mongoose",
     icon: <SiMongoose className="text-[#800000]" />,
-    featured: true,
+    featured: false,
   },
   {
     name: "PostgreSQL",
     icon: <BiLogoPostgresql className="text-[#336791]" />,
-    featured: false,
+    featured: true,
+  },
+  {
+    name: "Prisma",
+    icon: <SiPrisma className="text-[#2D3748]" />,
+    featured: true,
   },
   {
     name: "Redis",

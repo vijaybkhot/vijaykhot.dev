@@ -24,7 +24,7 @@ const Footer = () => {
           >
             <SiLeetcode />
           </SocialIcon>
-          <SocialIcon href="mailto:vijay-khot@outlook.com" ariaLabel="Email">
+          <SocialIcon href="mailto:vijay@vijaykhot.com" ariaLabel="Email">
             <FaEnvelope />
           </SocialIcon>
         </div>

@@ -53,6 +53,32 @@ export const projects = [
   },
 
   {
+    title: "Email Outreach Platform",
+    featured: true,
+    description:
+      "A robust full-stack platform for personalized email campaigns, contact management, and template-driven outreach. Built for efficiency, scalability, and real-world deliverability.",
+    contribution:
+      "Led end-to-end development: architected RESTful APIs, designed service layer, implemented Prisma transactions, and solved critical email deliverability issues (SPF, DKIM, DMARC, AWS SES). Integrated rich text editor, live preview, dynamic placeholders, and campaign management. Migrated email infrastructure for sender reputation and production readiness.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma",
+      "AWS SES",
+      "Tailwind CSS",
+      "Docker",
+      "Jest",
+    ],
+    image: "/projects/outreachly.png",
+    github: "https://github.com/vijaybkhot/outreach-app",
+    live: "",
+    youtube: "",
+    labels: ["Solo Project", "Production-Ready", "Email", "Cloud"],
+  },
+
+  {
     title: "Better Food Logs",
     featured: true,
     description:

@@ -1,4 +1,4 @@
-import { FaAws, FaLock } from "react-icons/fa6";
+import { FaAws, FaLock, FaEnvelope } from "react-icons/fa6";
 import {
   SiJavascript,
   SiTypescript,
@@ -27,6 +27,7 @@ import {
   SiSupabase,
   SiFigma,
   SiPrisma,
+  SiJest,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
@@ -155,6 +156,16 @@ export const techIcons = [
   },
   { name: "AWS", icon: <FaAws className="text-orange-400" />, featured: true },
   {
+    name: "AWS SES",
+    icon: (
+      <div className="relative">
+        <FaAws className="text-orange-400" />
+        <FaEnvelope className="absolute text-xs text-blue-500 -bottom-1 -right-1" />
+      </div>
+    ),
+    featured: false,
+  },
+  {
     name: "Vercel",
     icon: <TbBrandVercelFilled className="text-black dark:text-white" />,
     featured: false,
@@ -195,6 +206,11 @@ export const techIcons = [
     name: "GitHub",
     icon: <SiGithub className="text-black dark:text-white" />,
     featured: true,
+  },
+  {
+    name: "Jest",
+    icon: <SiJest className="text-[#C21325]" />,
+    featured: false,
   },
   {
     name: "VS Code",

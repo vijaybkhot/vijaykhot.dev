@@ -28,11 +28,11 @@ const Hero = () => {
         className="max-w-2xl mb-10 text-lg leading-relaxed"
         style={{ color: "#cbd5e1" }}
       >
-        I don&#39;t just build software; I build it with the perspective of an
-        end-user who has managed multi-million dollar projects. My background in
-        civil engineering, combined with a Master&#39;s in Computer Science,
-        allows me to create robust, backend systems that solve real-world
-        operational challenges.
+        I&#39;m a backend engineer who builds robust, scalable systems using{" "}
+        <strong>Node.js, TypeScript, and AWS</strong>. My approach is shaped by
+        six years of experience managing large-scale construction projects,
+        giving me a unique perspective on solving real-world operational
+        challenges with clean, reliable code.
       </p>
 
       <div className="flex flex-col justify-center gap-4 sm:flex-row sm:justify-start">

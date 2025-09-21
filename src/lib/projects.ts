@@ -5,7 +5,7 @@ export const projects = [
     description:
       "A solo-built interactive music management app with full CRUD and search features for artists, albums, companies, and songs.",
     contribution:
-      "Independently built the full frontend with Next.js and TypeScript for maintainability and type safety. Developed GraphQL APIs with Apollo Client and integrated Redis caching. Currently creating a Docker image for AWS deployment. Hosted on Vercel (frontend) and Render (backend); initial load may take a few seconds due to free hosting.",
+      "Independently built the full frontend with Next.js and TypeScript for maintainability and type safety. Developed GraphQL APIs with Apollo Client and integrated Redis caching. Successfully containerized the project and deployed to AWS EC2. Currently working on NGINX server hosting for production. Hosted on Vercel (frontend) and Render (backend); initial load may take a few seconds due to free hosting.",
     tech: [
       "Next.js",
       "TypeScript",
@@ -22,7 +22,7 @@ export const projects = [
     github: "https://github.com/vijaybkhot/NexTune",
     live: "https://nex-tune.vercel.app",
     youtube: "",
-    labels: ["Solo Project", "In Progress"],
+    labels: ["Solo Project", "In Progress", "Best Project"],
   },
   {
     title: "eVoltzo",
@@ -49,7 +49,7 @@ export const projects = [
     // live: "https://d1jbturyp4djjd.cloudfront.net/",
     live: "",
     youtube: "https://www.youtube.com/embed/p43tNK85-wU?si=r98Xb3QGLUg4Bk6Q",
-    labels: ["Team Project", "Best Project"],
+    labels: ["Team Project"],
   },
 
   {
@@ -75,7 +75,7 @@ export const projects = [
     github: "https://github.com/vijaybkhot/outreach-app",
     live: "",
     youtube: "",
-    labels: ["Solo Project", "Production-Ready", "Email", "Cloud"],
+    labels: ["Solo Project", "In Progress", "Email", "Cloud"],
   },
 
   {
@@ -125,7 +125,7 @@ export const projects = [
       "Led development, designed data models, and built backend workflows for customers, employees, managers, and admins.",
     tech: ["Node.js", "Express", "MongoDB", "Leaflet", "Stripe", "JWT Auth"],
     image: "/projects/serviceeasy.png",
-    github: "https://github.com/vijaykhot/serviceeasy",
+    github: "https://github.com/vijaybkhot/ServiceEasy",
     live: "https://serviceeasy.onrender.com/",
     youtube: "https://www.youtube.com/embed/QGSx0CbL9QA?si=woEGIoN89NQadzXU",
     labels: ["Team Project", "Course Project", "Web Programming"],
@@ -164,7 +164,7 @@ export const projects = [
       "Led UI/UX design and user research to ensure an engaging, accessible experience. Created interactive prototypes and collaborated closely on usability testing and feedback-driven improvements.",
     tech: ["React", "Express", "MongoDB", "Figma"],
     image: "/projects/campuspulse.png",
-    github: "https://github.com/vijaykhot/campus-pulse",
+    github: "https://github.com/vijaybkhot/campus-pulse",
     youtube: "https://www.youtube.com/embed/whcI4JllTRQ",
     labels: ["Team Project", "Course Project", "HCI", "UI/UX"],
   },

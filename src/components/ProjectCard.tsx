@@ -13,6 +13,7 @@ type Project = {
   github?: string;
   live?: string | null;
   youtube?: string;
+  embed?: string;
   image?: string;
   contribution?: string;
   featured?: boolean;
@@ -22,6 +23,54 @@ type Project = {
 
 const ProjectCard: FC<{ project: Project }> = ({ project }) => {
   const [expanded, setExpanded] = useState(false);
+
+  // Map common label text to Tailwind color classes for consistent presentation
+  const getLabelClasses = (label: string) => {
+    const l = label.toLowerCase();
+    if (l.includes("team") || l.includes("group"))
+      return "bg-blue-600 text-white";
+    if (
+      l.includes("solo") ||
+      l.includes("individual") ||
+      l.includes("personal")
+    )
+      return "bg-green-600 text-white";
+    if (
+      l.includes("in progress") ||
+      l.includes("in-progress") ||
+      l.includes("ongoing")
+    )
+      return "bg-indigo-600 text-white";
+    if (l.includes("email") || l.includes("outreach") || l.includes("ses"))
+      return "bg-amber-500 text-slate-900";
+    if (
+      l.includes("cloud") ||
+      l.includes("aws") ||
+      l.includes("vercel") ||
+      l.includes("render")
+    )
+      return "bg-sky-600 text-white";
+    if (l.includes("backend") || l.includes("api") || l.includes("server"))
+      return "bg-rose-600 text-white";
+    if (l.includes("worker") || l.includes("bullmq") || l.includes("queue"))
+      return "bg-fuchsia-600 text-white";
+    if (
+      l.includes("compliance") ||
+      l.includes("security") ||
+      l.includes("governance")
+    )
+      return "bg-emerald-600 text-white";
+    if (l.includes("best") || l.includes("featured") || l.includes("top"))
+      return "bg-yellow-400 text-slate-900";
+    if (l.includes("hackathon") || l.includes("challenge"))
+      return "bg-violet-600 text-white";
+    if (l.includes("course") || l.includes("class") || l.includes("assignment"))
+      return "bg-amber-600 text-slate-900";
+    if (l.includes("hci") || l.includes("ui/ux") || l.includes("ui"))
+      return "bg-purple-600 text-white";
+    // default
+    return "bg-gray-600 text-white";
+  };
 
   const handleCardClick = () => {
     if (project.github) {
@@ -54,6 +103,21 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
             className="w-full h-full"
           ></iframe>
         </div>
+      ) : project.embed ? (
+        <div
+          className="overflow-hidden rounded aspect-video"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <iframe
+            src={project.embed}
+            title={`${project.title} demo`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            className="w-full h-full"
+          ></iframe>
+        </div>
       ) : project.image ? (
         <div
           className="relative w-full h-[250px] mb-4 rounded overflow-hidden"
@@ -78,21 +142,9 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
           {project.labels.map((label) => (
             <span
               key={label}
-              className={`inline-block px-3 py-1 text-xs font-semibold rounded-full
-          ${
-            label.toLowerCase().includes("team")
-              ? "bg-blue-600 text-white"
-              : label.toLowerCase().includes("solo") ||
-                label.toLowerCase().includes("individual")
-              ? "bg-green-600 text-white"
-              : label.toLowerCase().includes("hci") ||
-                label.toLowerCase().includes("ui/ux")
-              ? "bg-purple-600 text-white"
-              : label.toLowerCase().includes("course")
-              ? "bg-yellow-600 text-white"
-              : "bg-gray-600 text-white"
-          }
-        `}
+              className={`inline-block px-3 py-1 text-xs font-semibold rounded-full ${getLabelClasses(
+                label
+              )}`}
             >
               {label}
             </span>
@@ -175,6 +227,13 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
           <ButtonLink
             href={project.youtube}
             label="Watch Video"
+            variant="outlined"
+          />
+        )}
+        {project.embed && (
+          <ButtonLink
+            href={project.embed}
+            label="View Video"
             variant="outlined"
           />
         )}

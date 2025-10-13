@@ -1,5 +1,59 @@
 export const projects = [
   {
+    title: "Email Outreach Platform",
+    featured: true,
+    description:
+      "A robust full-stack platform for personalized email campaigns, contact management, and template-driven outreach. Built for efficiency, scalability, and real-world deliverability.",
+    contribution:
+      "Led end-to-end development: architected RESTful APIs, designed service layer, implemented Prisma transactions, and solved critical email deliverability issues (SPF, DKIM, DMARC, AWS SES). Integrated rich text editor, live preview, dynamic placeholders, and campaign management. Migrated email infrastructure for sender reputation and production readiness.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma",
+      "AWS SES",
+      "Tailwind CSS",
+      "Docker",
+      "Jest",
+    ],
+    image: "/projects/outreachly.png",
+    github: "https://github.com/vijaybkhot/outreach-app",
+    live: "",
+    youtube: "",
+    labels: ["Solo Project", "In Progress", "Email", "Cloud"],
+  },
+
+  {
+    title: "Permit Workflow Service",
+    featured: true,
+    description:
+      "A focused backend for construction permitting applications and compliance: deterministic rule engine, guarded state machine, and async PDF packet generation.",
+    contribution:
+      "Designed and implemented a layered service (API/Domain/Data) with a deterministic rule engine, guarded state transitions, Prisma-backed persistence, and BullMQ worker for Puppeteer-based PDF packet generation. Added Prometheus-compatible metrics, Swagger docs, and secure x-api-key preValidation. Provided Docker setups and seed data for local development.",
+    tech: [
+      "Node.js",
+      "TypeScript",
+      "Fastify",
+      "Prisma",
+      "PostgreSQL",
+      "Redis",
+      "BullMQ",
+      "Puppeteer",
+      "Nunjucks",
+      "Docker",
+      "Jest",
+    ],
+    image: "",
+    embed: "https://www.loom.com/embed/b00db432f22b440086291d0f4854fa77",
+    github: "https://github.com/vijaybkhot/permit-workflow-service",
+    live: "",
+    youtube: "",
+    labels: ["Backend", "Worker", "Compliance", "ConTech", "AEC", "PermitTech"],
+  },
+
+  {
     title: "NexTune",
     featured: true,
     description:
@@ -22,8 +76,9 @@ export const projects = [
     github: "https://github.com/vijaybkhot/NexTune",
     live: "https://nex-tune.vercel.app",
     youtube: "",
-    labels: ["Solo Project", "In Progress", "Best Project"],
+    labels: ["Solo Project"],
   },
+
   {
     title: "eVoltzo",
     featured: true,
@@ -50,32 +105,6 @@ export const projects = [
     live: "",
     youtube: "https://www.youtube.com/embed/p43tNK85-wU?si=r98Xb3QGLUg4Bk6Q",
     labels: ["Team Project"],
-  },
-
-  {
-    title: "Email Outreach Platform",
-    featured: true,
-    description:
-      "A robust full-stack platform for personalized email campaigns, contact management, and template-driven outreach. Built for efficiency, scalability, and real-world deliverability.",
-    contribution:
-      "Led end-to-end development: architected RESTful APIs, designed service layer, implemented Prisma transactions, and solved critical email deliverability issues (SPF, DKIM, DMARC, AWS SES). Integrated rich text editor, live preview, dynamic placeholders, and campaign management. Migrated email infrastructure for sender reputation and production readiness.",
-    tech: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Node.js",
-      "PostgreSQL",
-      "Prisma",
-      "AWS SES",
-      "Tailwind CSS",
-      "Docker",
-      "Jest",
-    ],
-    image: "/projects/outreachly.png",
-    github: "https://github.com/vijaybkhot/outreach-app",
-    live: "",
-    youtube: "",
-    labels: ["Solo Project", "In Progress", "Email", "Cloud"],
   },
 
   {

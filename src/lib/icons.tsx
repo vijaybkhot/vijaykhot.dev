@@ -29,7 +29,13 @@ import {
   SiPrisma,
   SiJest,
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
+import {
+  FaJava,
+  FaServer,
+  FaBullhorn,
+  FaFileCode,
+  FaChrome,
+} from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FiBell } from "react-icons/fi";
@@ -146,6 +152,28 @@ export const techIcons = [
     name: "Redis",
     icon: <SiRedis className="text-red-500" />,
     featured: true,
+  },
+
+  // Backend frameworks & workers (representative icons)
+  {
+    name: "Fastify",
+    icon: <FaServer className="text-violet-500" />,
+    featured: true,
+  },
+  {
+    name: "BullMQ",
+    icon: <FaBullhorn className="text-red-500" />,
+    featured: true,
+  },
+  {
+    name: "Nunjucks",
+    icon: <FaFileCode className="text-indigo-400" />,
+    featured: false,
+  },
+  {
+    name: "Puppeteer",
+    icon: <FaChrome className="text-gray-400" />,
+    featured: false,
   },
 
   // DevOps & Cloud

@@ -28,6 +28,10 @@ import {
   SiFigma,
   SiPrisma,
   SiJest,
+  SiFastapi,
+  SiGithubactions,
+  SiHeroku,
+  SiAmazon,
 } from "react-icons/si";
 import {
   FaJava,
@@ -35,6 +39,7 @@ import {
   FaBullhorn,
   FaFileCode,
   FaChrome,
+  FaDatabase,
 } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -127,6 +132,18 @@ export const techIcons = [
     featured: false,
   },
 
+  // FastAPI & Migrations
+  {
+    name: "FastAPI",
+    icon: <SiFastapi className="text-teal-400" />,
+    featured: true,
+  },
+  {
+    name: "Alembic",
+    icon: <FaDatabase className="text-emerald-500" />,
+    featured: false,
+  },
+
   // Databases & ORMs
   {
     name: "MongoDB",
@@ -196,6 +213,22 @@ export const techIcons = [
   {
     name: "Vercel",
     icon: <TbBrandVercelFilled className="text-black dark:text-white" />,
+    featured: false,
+  },
+  // CI / Hosting / Cloud
+  {
+    name: "GitHub Actions",
+    icon: <SiGithubactions className="text-black dark:text-white" />,
+    featured: false,
+  },
+  {
+    name: "Heroku",
+    icon: <SiHeroku className="text-violet-500" />,
+    featured: false,
+  },
+  {
+    name: "AWS ECS",
+    icon: <SiAmazon className="text-orange-400" />,
     featured: false,
   },
 

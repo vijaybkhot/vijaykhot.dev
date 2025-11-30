@@ -46,7 +46,7 @@ export const projects = [
       "Vercel",
       "AWS ECS",
     ],
-    image: "/projects/material-forecasting-engine.png",
+    image: "/projects/material-forecasting-architecture.png",
     github: "https://github.com/vijaybkhot/material-forecasting-engine",
     live: "https://material-forecasting-engine.vercel.app/",
     youtube:

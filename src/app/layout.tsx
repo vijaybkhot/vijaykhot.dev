@@ -5,8 +5,6 @@ import PageTransition from "@/components/PageTransition";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import PageArrows from "@/components/PageArrow";
-import BackgroundParticles from "@/components/BackgroundParticles";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,16 +32,25 @@ export default function RootLayout({
       <body
         className={`h-full bg-[#0f172a] text-white ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div
-          className="relative flex flex-col min-h-screen overflow-hidden"
-          style={{ perspective: "1200px" }}
-        >
+        <div className="relative flex flex-col min-h-screen overflow-hidden">
+          {/* --- THE SYSTEMS BLUEPRINT BACKGROUND --- */}
+          <div className="fixed inset-0 z-0 pointer-events-none">
+            {/* 1. Base Dark Background */}
+            <div className="absolute inset-0 bg-[#0f172a]" />
+
+            {/* 2. The Technical Grid */}
+            <div className="absolute inset-0 bg-grid-slate bg-[size:40px_40px]" />
+
+            {/* 3. Subtle Vignette (Gradient Overlay) 
+                This fades the grid out at the bottom, keeping focus on the content.
+                Safer and more performant than complex masking. */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0f172a]" />
+          </div>
+          {/* ---------------------------------------- */}
+
           <Navbar />
 
-          <PageArrows />
-
-          <main className="flex-1">
-            <BackgroundParticles />
+          <main className="relative flex-1 z-10">
             <PageTransition>{children}</PageTransition>
           </main>
 

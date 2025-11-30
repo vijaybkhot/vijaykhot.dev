@@ -82,7 +82,7 @@ export const projects = [
 
   {
     title: "NexTune",
-    featured: true,
+    featured: false,
     description:
       "A solo-built interactive music management app with full CRUD and search features for artists, albums, companies, and songs.",
     contribution:
@@ -108,7 +108,7 @@ export const projects = [
 
   {
     title: "eVoltzo",
-    featured: true,
+    featured: false,
     description:
       "A platform that connects EV owners with underused charging stations through real-time booking, map discovery, and role-based access.",
     contribution:
@@ -137,7 +137,7 @@ export const projects = [
 
   {
     title: "Better Food Logs",
-    featured: true,
+    featured: false,
     description:
       "A frictionless food logging app focused on simplicity, speed, and meaningful tracking—designed to avoid the clutter of legacy apps and help users build consistent habits.",
     contribution:
@@ -160,7 +160,7 @@ export const projects = [
 
   {
     title: "SpaceX Explorer",
-    featured: true,
+    featured: false,
     description:
       "A statically generated app to browse and explore launches, rockets, and related SpaceX data in an interconnected, paginated UI.",
     contribution:
@@ -175,7 +175,7 @@ export const projects = [
 
   {
     title: "ServiceEasy",
-    featured: true,
+    featured: false,
     description:
       "An app for booking device repair services with location-based store discovery, search, and a streamlined booking experience.",
     contribution:
@@ -191,7 +191,7 @@ export const projects = [
 
   {
     title: "Sprint2Health",
-    featured: true,
+    featured: false,
     description:
       "A voice-enabled assistant that helps seniors manage appointments, health data, and medication reminders with secure communication.",
     contribution:
@@ -216,7 +216,7 @@ export const projects = [
   },
   {
     title: "Campus Pulse",
-    featured: true,
+    featured: false,
     description:
       "A student-centered platform focused on intuitive discovery and engagement with university events and clubs, emphasizing seamless user experience and interaction design.",
     contribution:

@@ -19,7 +19,7 @@ export const projects = [
       "Docker",
       "Jest",
     ],
-    image: "",
+    image: "/projects/permit-workflow-architecture.png",
     embed: "https://www.loom.com/embed/b00db432f22b440086291d0f4854fa77",
     github: "https://github.com/vijaybkhot/permit-workflow-service",
     live: "",

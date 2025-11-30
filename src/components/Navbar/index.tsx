@@ -8,10 +8,8 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [resumeOpen, setResumeOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleResume = () => setResumeOpen((prev) => !prev);
 
   const navLinkClass = (path: string) =>
     `hover:text-blue-400 transition ${
@@ -41,35 +39,16 @@ const Navbar = () => {
             Contact
           </Link>
 
-          {/* Resume Dropdown (Click to Toggle) */}
-          <div className="relative">
-            <button
-              onClick={toggleResume}
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white transition bg-blue-500 rounded-full hover:bg-blue-600"
-            >
-              <FiExternalLink className="text-base" />
-              Resume
-            </button>
-            {resumeOpen && (
-              <div className="absolute right-0 z-20 w-48 py-2 mt-2 text-sm text-white bg-gray-800 rounded-lg shadow-lg">
-                <a
-                  href="/resume/Vijay_Khot_Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 hover:bg-gray-700"
-                >
-                  View Resume
-                </a>
-                <a
-                  href="/resume/Vijay_Khot_Resume_full_stack.pdf"
-                  download
-                  className="block px-4 py-2 hover:bg-gray-700"
-                >
-                  Download Resume
-                </a>
-              </div>
-            )}
-          </div>
+          {/* Resume Button - Direct Link */}
+          <a
+            href="/resume/Vijay_Khot_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white transition bg-blue-500 rounded-full hover:bg-blue-600"
+          >
+            <FiExternalLink className="text-base" />
+            Resume
+          </a>
         </nav>
 
         {/* Mobile Toggle */}
@@ -114,19 +93,14 @@ const Navbar = () => {
             Contact
           </Link>
           <a
-            href="/resume/Vijay_Khot_Resume_full_stack.pdf"
+            href="/resume/Vijay_Khot_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-4 py-2 text-sm font-semibold text-white transition bg-blue-500 rounded-full hover:bg-blue-600"
+            onClick={() => setIsOpen(false)}
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white transition bg-blue-500 rounded-full hover:bg-blue-600 w-fit"
           >
-            View Resume
-          </a>
-          <a
-            href="/resume/Vijay_Khot_Resume_full_stack.pdf"
-            download
-            className="inline-block px-4 py-2 text-sm font-semibold text-white transition bg-blue-500 rounded-full hover:bg-blue-600"
-          >
-            Download Resume
+            <FiExternalLink className="text-base" />
+            Resume
           </a>
         </nav>
       )}

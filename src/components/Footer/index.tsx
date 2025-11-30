@@ -1,4 +1,3 @@
-// components/Footer.tsx
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import SocialIcon from "./SocialIcon";

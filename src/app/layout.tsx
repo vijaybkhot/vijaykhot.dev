@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vijay Khot | Software Developer",
+  title: "Vijay Khot | Backend & ML Infrastructure Engineer",
   description:
-    "Portfolio of Vijay Khot – a passionate full-stack web developer with experience in React, Next.js, Node.js, and MongoDB.",
+    "Backend Engineer focused on APIs, data pipelines, and ML-powered services for the built world. Experienced with Python (FastAPI), Node.js (Fastify), PostgreSQL, Redis, Docker, and AWS.",
 };
 
 export default function RootLayout({

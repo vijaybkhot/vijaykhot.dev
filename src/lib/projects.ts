@@ -49,7 +49,8 @@ export const projects = [
     image: "/projects/material-forecasting-engine.png",
     github: "https://github.com/vijaybkhot/material-forecasting-engine",
     live: "https://material-forecasting-engine.vercel.app/",
-    youtube: "",
+    youtube:
+      "https://www.youtube.com/embed/NEc9YYhIxww?si=N3MGX7sPXw8v_Zgm&rel=0",
     labels: ["Solo Project", "MVP", "In Progress"],
   },
 
@@ -129,7 +130,8 @@ export const projects = [
     github: "https://github.com/gvaswani98/cs-554-final-project",
     // live: "https://d1jbturyp4djjd.cloudfront.net/",
     live: "",
-    youtube: "https://www.youtube.com/embed/p43tNK85-wU?si=r98Xb3QGLUg4Bk6Q",
+    youtube:
+      "https://www.youtube.com/embed/p43tNK85-wU?si=r98Xb3QGLUg4Bk6Q&rel=0",
     labels: ["Team Project"],
   },
 
@@ -182,7 +184,8 @@ export const projects = [
     image: "/projects/serviceeasy.png",
     github: "https://github.com/vijaybkhot/ServiceEasy",
     live: "https://serviceeasy.onrender.com/",
-    youtube: "https://www.youtube.com/embed/QGSx0CbL9QA?si=woEGIoN89NQadzXU",
+    youtube:
+      "https://www.youtube.com/embed/QGSx0CbL9QA?si=woEGIoN89NQadzXU&rel=0",
     labels: ["Team Project", "Course Project", "Web Programming"],
   },
 
@@ -207,7 +210,8 @@ export const projects = [
     image: "/projects/sprint2health.png",
     github: "https://github.com/harsh9802/sprint-to-health",
     live: "",
-    youtube: "https://www.youtube.com/embed/pbw8xyw-jNU?si=1E85dZcLdPQXHDG4",
+    youtube:
+      "https://www.youtube.com/embed/pbw8xyw-jNU?si=1E85dZcLdPQXHDG4&rel=0",
     labels: ["Team Project", "Course Project", "Agile Development"],
   },
   {
@@ -220,7 +224,7 @@ export const projects = [
     tech: ["React", "Express", "MongoDB", "Figma"],
     image: "/projects/campuspulse.png",
     github: "https://github.com/vijaybkhot/campus-pulse",
-    youtube: "https://www.youtube.com/embed/whcI4JllTRQ",
+    youtube: "https://www.youtube.com/embed/whcI4JllTRQ?rel=0",
     labels: ["Team Project", "Course Project", "HCI", "UI/UX"],
   },
   {

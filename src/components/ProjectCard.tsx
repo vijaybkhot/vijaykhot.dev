@@ -1,19 +1,11 @@
 "use client";
 
-import * as motion from "motion/react-client";
 import Image from "next/image";
 import { FC, useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { techIcons as icons } from "@/lib/icons";
 import ButtonLink from "./ButtonLink";
-import {
-  FaExpand,
-  FaTimes,
-  FaGithub,
-  FaExternalLinkAlt,
-  FaYoutube,
-  FaSearchPlus,
-  FaSearchMinus,
-} from "react-icons/fa";
+import { FaExpand, FaTimes, FaSearchPlus, FaSearchMinus } from "react-icons/fa";
 
 type Project = {
   title: string;
@@ -166,108 +158,112 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
 
   return (
     <>
-      {/* --- LIGHTBOX MODAL --- */}
-      {isModalOpen && project.image && (
-        <div
-          className="z-[100] bg-black/95 backdrop-blur-sm"
-          onClick={closeModal}
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            width: "100vw",
-            height: "100vh",
-            overflow: "hidden",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          {/* Close Button */}
-          <button
-            className="z-20 text-white transition hover:text-red-400"
-            style={{ position: "fixed", top: "1rem", right: "1rem" }}
-            onClick={(e) => {
-              e.stopPropagation();
-              closeModal();
-            }}
-            aria-label="Close"
-          >
-            <FaTimes size={28} />
-          </button>
-
-          {/* Zoom Controls */}
+      {/* --- LIGHTBOX MODAL (rendered via Portal to escape stacking context) --- */}
+      {isModalOpen &&
+        project.image &&
+        createPortal(
           <div
-            className="z-20 flex gap-2"
-            style={{ position: "fixed", top: "1rem", left: "1rem" }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="flex items-center justify-center w-10 h-10 text-white transition rounded-full bg-slate-800/80 hover:bg-slate-700"
-              onClick={zoomOut}
-              aria-label="Zoom out"
-            >
-              <FaSearchMinus size={16} />
-            </button>
-            <span className="flex items-center justify-center px-3 text-sm text-white rounded-full bg-slate-800/80">
-              {Math.round(zoom * 100)}%
-            </span>
-            <button
-              className="flex items-center justify-center w-10 h-10 text-white transition rounded-full bg-slate-800/80 hover:bg-slate-700"
-              onClick={zoomIn}
-              aria-label="Zoom in"
-            >
-              <FaSearchPlus size={16} />
-            </button>
-          </div>
-
-          {/* Centered Image */}
-          <div
-            className="pointer-events-auto"
-            onClick={(e) => e.stopPropagation()}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
+            className="z-[100] bg-black/95 backdrop-blur-sm"
+            onClick={closeModal}
             style={{
-              transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
-              transition: isDragging ? "none" : "transform 0.2s ease-out",
-              cursor: zoom > 1 ? (isDragging ? "grabbing" : "grab") : "default",
+              position: "fixed",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              width: "100vw",
+              height: "100vh",
+              overflow: "hidden",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            <Image
-              src={project.image}
-              alt={`${project.title} Architecture`}
-              width={1200}
-              height={800}
-              className="object-contain select-none"
-              style={{
-                maxWidth: "85vw",
-                maxHeight: "80vh",
-                width: "auto",
-                height: "auto",
-                pointerEvents: "none",
+            {/* Close Button */}
+            <button
+              className="z-20 text-white transition hover:text-red-400"
+              style={{ position: "fixed", top: "1rem", right: "1rem" }}
+              onClick={(e) => {
+                e.stopPropagation();
+                closeModal();
               }}
-              quality={100}
-              priority
-              draggable={false}
-            />
-          </div>
+              aria-label="Close"
+            >
+              <FaTimes size={28} />
+            </button>
 
-          {/* Caption */}
-          <div
-            className="z-20 text-center pointer-events-none"
-            style={{ position: "fixed", bottom: "1rem", left: 0, right: 0 }}
-          >
-            <span className="inline-block px-4 py-2 text-sm text-white border rounded-full bg-black/60 backdrop-blur-md border-white/10">
-              {project.title} — Scroll to zoom{zoom > 1 ? " • Drag to pan" : ""}{" "}
-              • Click outside to close
-            </span>
-          </div>
-        </div>
-      )}
+            {/* Zoom Controls */}
+            <div
+              className="z-20 flex gap-2"
+              style={{ position: "fixed", top: "1rem", left: "1rem" }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="flex items-center justify-center w-10 h-10 text-white transition rounded-full bg-slate-800/80 hover:bg-slate-700"
+                onClick={zoomOut}
+                aria-label="Zoom out"
+              >
+                <FaSearchMinus size={16} />
+              </button>
+              <span className="flex items-center justify-center px-3 text-sm text-white rounded-full bg-slate-800/80">
+                {Math.round(zoom * 100)}%
+              </span>
+              <button
+                className="flex items-center justify-center w-10 h-10 text-white transition rounded-full bg-slate-800/80 hover:bg-slate-700"
+                onClick={zoomIn}
+                aria-label="Zoom in"
+              >
+                <FaSearchPlus size={16} />
+              </button>
+            </div>
+
+            {/* Centered Image */}
+            <div
+              className="pointer-events-auto"
+              onClick={(e) => e.stopPropagation()}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseUp}
+              style={{
+                transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
+                transition: isDragging ? "none" : "transform 0.2s ease-out",
+                cursor:
+                  zoom > 1 ? (isDragging ? "grabbing" : "grab") : "default",
+              }}
+            >
+              <Image
+                src={project.image}
+                alt={`${project.title} Architecture`}
+                width={1200}
+                height={800}
+                className="object-contain select-none"
+                style={{
+                  maxWidth: "85vw",
+                  maxHeight: "80vh",
+                  width: "auto",
+                  height: "auto",
+                  pointerEvents: "none",
+                }}
+                quality={100}
+                priority
+                draggable={false}
+              />
+            </div>
+
+            {/* Caption */}
+            <div
+              className="z-20 text-center pointer-events-none"
+              style={{ position: "fixed", bottom: "1rem", left: 0, right: 0 }}
+            >
+              <span className="inline-block px-4 py-2 text-sm text-white border rounded-full bg-black/60 backdrop-blur-md border-white/10">
+                {project.title} — Scroll to zoom
+                {zoom > 1 ? " • Drag to pan" : ""} • Click outside to close
+              </span>
+            </div>
+          </div>,
+          document.body
+        )}
 
       {/* --- PROJECT CARD --- */}
       <div

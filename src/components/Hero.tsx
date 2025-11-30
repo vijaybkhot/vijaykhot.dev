@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic";
 import { FaChevronDown, FaFileDownload } from "react-icons/fa";
-import ButtonLink from "./ButtonLink";
 
 // Dynamically import Skills to avoid SSR hydration mismatches
 const Skills = dynamic(() => import("@/components/Skills"), {

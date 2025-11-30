@@ -7,12 +7,14 @@ interface ButtonLinkProps {
   href: string;
   label: string;
   variant?: Variant;
+  openInNewTab?: boolean;
 }
 
 const ButtonLink: React.FC<ButtonLinkProps> = ({
   href,
   label,
   variant = "primary",
+  openInNewTab = false,
 }) => {
   const baseClasses = "px-6 py-3 rounded-full text-sm font-medium transition";
 
@@ -23,12 +25,13 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   };
 
   const isExternal = href.startsWith("http");
+  const shouldOpenNewTab = isExternal || openInNewTab;
 
   return (
     <a
       href={href}
       className={clsx(baseClasses, variantClasses[variant])}
-      {...(isExternal && {
+      {...(shouldOpenNewTab && {
         target: "_blank",
         rel: "noopener noreferrer",
       })}

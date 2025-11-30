@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between h-16 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold text-white">
-          vijaykhot.dev
+          vijaykhot.com
         </Link>
 
         {/* Desktop Nav */}

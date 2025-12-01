@@ -42,7 +42,7 @@ const Hero = () => {
 
       {/* 5. The 3-Bullet List (Ultra Compact Padding) */}
       <div className="grid gap-2 mb-4 text-left sm:grid-cols-3">
-        <div className="p-2 transition-colors border rounded-lg bg-slate-800/50 border-slate-700 hover:border-blue-500/50">
+        <div className="p-2 transition-all duration-300 border rounded-lg bg-slate-800/50 border-slate-700 hover:border-blue-500/50 hover:scale-[1.03]">
           <h3 className="mb-0.5 font-semibold text-white text-xs sm:text-sm">
             Backend & APIs
           </h3>
@@ -50,7 +50,7 @@ const Hero = () => {
             RESTful services with solid data modeling and caching.
           </p>
         </div>
-        <div className="p-2 transition-colors border rounded-lg bg-slate-800/50 border-slate-700 hover:border-blue-500/50">
+        <div className="p-2 transition-all duration-300 border rounded-lg bg-slate-800/50 border-slate-700 hover:border-blue-500/50 hover:scale-[1.03]">
           <h3 className="mb-0.5 font-semibold text-white text-xs sm:text-sm">
             ML in Production
           </h3>
@@ -58,7 +58,7 @@ const Hero = () => {
             Dockerized inference engines with Redis and CI/CD.
           </p>
         </div>
-        <div className="p-2 transition-colors border rounded-lg bg-slate-800/50 border-slate-700 hover:border-blue-500/50">
+        <div className="p-2 transition-all duration-300 border rounded-lg bg-slate-800/50 border-slate-700 hover:border-blue-500/50 hover:scale-[1.03]">
           <h3 className="mb-0.5 font-semibold text-white text-xs sm:text-sm">
             Construction-Aware
           </h3>

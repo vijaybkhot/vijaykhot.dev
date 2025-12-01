@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaMedium } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import SocialIcon from "./SocialIcon";
 
@@ -22,6 +22,12 @@ const Footer = () => {
             ariaLabel="LeetCode"
           >
             <SiLeetcode />
+          </SocialIcon>
+          <SocialIcon
+            href="https://medium.com/@vijaysinh.khot"
+            ariaLabel="Medium"
+          >
+            <FaMedium />
           </SocialIcon>
           <SocialIcon href="mailto:vijay@vijaykhot.com" ariaLabel="Email">
             <FaEnvelope />

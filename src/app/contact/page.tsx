@@ -48,8 +48,8 @@ export default function ContactPage() {
         </h1>
 
         <p className="mb-4 text-sm leading-relaxed text-center text-slate-300">
-          I am currently open to Backend and ML Infrastructure roles,
-          particularly in the ConTech or PropTech space. If you have an
+          I am currently open to Backend, ML Infrastructure, and Fullstack
+          roles, particularly in the ConTech or PropTech space. If you have an
           engineering challenge or an opportunity to discuss, please reach out.
         </p>
 

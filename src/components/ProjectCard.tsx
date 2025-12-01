@@ -46,7 +46,6 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
   const zoomOut = () => {
     setZoom((z) => {
       const newZoom = Math.max(z - 0.1, 0.5);
-      // Reset pan when zooming back to 1 or below
       if (newZoom <= 1) {
         setPan({ x: 0, y: 0 });
       }
@@ -158,7 +157,7 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
 
   return (
     <>
-      {/* --- LIGHTBOX MODAL (rendered via Portal to escape stacking context) --- */}
+      {/* --- LIGHTBOX MODAL --- */}
       {isModalOpen &&
         project.image &&
         createPortal(
@@ -292,7 +291,7 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
             {/* Hover Overlay with "Expand" Hint */}
             <div className="absolute inset-0 flex items-center justify-center transition-colors duration-300 opacity-0 bg-black/0 group-hover:bg-black/20 group-hover:opacity-100">
               <div className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-white transition-transform transform translate-y-2 border rounded-full shadow-xl bg-slate-900/80 backdrop-blur border-slate-600 group-hover:translate-y-0">
-                <FaExpand /> View Diagram
+                <FaExpand /> View Architecture
               </div>
             </div>
           </div>
@@ -399,25 +398,30 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
             })}
           </div>
 
-          {/* Action Buttons */}
+          {/* UPDATED Action Buttons */}
           <div
             className="flex flex-wrap gap-3"
             onClick={(e) => e.stopPropagation()}
           >
             {project.github && (
+              // CHANGED: Primary variant for GitHub
               <ButtonLink
                 href={project.github}
-                label="Source"
-                variant="outlined"
+                label="GitHub"
+                variant="primary"
               />
             )}
             {project.live && (
-              <ButtonLink href={project.live} label="Live" variant="outlined" />
+              <ButtonLink
+                href={project.live}
+                label="Live App"
+                variant="outlined"
+              />
             )}
             {(project.youtube || project.embed) && (
               <ButtonLink
                 href={project.youtube || project.embed || ""}
-                label="Watch Demo"
+                label="Watch Walkthrough"
                 variant="outlined"
               />
             )}

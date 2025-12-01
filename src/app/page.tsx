@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
 import FeaturedWork from "@/components/FeaturedWork";
 import ButtonLink from "@/components/ButtonLink";
+import Writing from "@/components/Writing";
 
 export default function Home() {
   return (
@@ -14,7 +15,9 @@ export default function Home() {
       <Experience />
       {/* 3. FEATURED WORK (The Technical Proof) */}
       <FeaturedWork />
-      {/* 4. CLOSING CTA (The "Deal Closer") */}
+      {/* 4. WRITING SECTION (New) */}
+      <Writing />
+      {/* 5. CLOSING CTA */}
       <section className="max-w-3xl px-6 mx-auto text-center">
         <h2 className="mb-6 text-3xl font-bold text-white">
           Ready to build scalable systems?

@@ -210,7 +210,6 @@ export const projects = [
       "CSS",
       "HTML",
     ],
-    image: "/projects/sprint2health.png",
     github: "https://github.com/harsh9802/sprint-to-health",
     live: "",
     youtube:
@@ -225,21 +224,20 @@ export const projects = [
     contribution:
       "Led UI/UX design and user research to ensure an engaging, accessible experience. Created interactive prototypes and collaborated closely on usability testing and feedback-driven improvements.",
     tech: ["React", "Express", "MongoDB", "Figma"],
-    image: "/projects/campuspulse.png",
     github: "https://github.com/vijaybkhot/campus-pulse",
     youtube: "https://www.youtube.com/embed/whcI4JllTRQ?rel=0",
     labels: ["Team Project", "Course Project", "HCI", "UI/UX"],
   },
-  {
-    title: "Natours",
-    featured: false,
-    description:
-      "A booking platform for guided tours, supporting user roles, payments, and secure access control.",
-    contribution:
-      "Built as part of a structured bootcamp project to apply backend architecture principles and best practices.",
-    tech: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT", "Stripe"],
-    github: "https://github.com/vijaykhot/natours-api",
-    live: null,
-    labels: ["Course Project"],
-  },
+  // {
+  //   title: "Natours",
+  //   featured: false,
+  //   description:
+  //     "A booking platform for guided tours, supporting user roles, payments, and secure access control.",
+  //   contribution:
+  //     "Built as part of a structured bootcamp project to apply backend architecture principles and best practices.",
+  //   tech: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT", "Stripe"],
+  //   github: "https://github.com/vijaykhot/natours-api",
+  //   live: null,
+  //   labels: ["Course Project"],
+  // },
 ];

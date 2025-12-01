@@ -9,6 +9,8 @@ import {
   FaGithub,
   FaLinkedin,
   FaMedium,
+  FaGraduationCap,
+  FaAward,
 } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
@@ -166,6 +168,80 @@ export default function AboutPage() {
                 </span>
               </div>
             </a>
+
+            {/* Education Card (Updated with Impact) */}
+            <div className="p-6 transition-all duration-300 border shadow-xl bg-slate-800/50 border-slate-700 rounded-2xl hover:border-blue-500/50 hover:scale-[1.02]">
+              <h4 className="flex items-center gap-2 mb-6 font-semibold text-white">
+                <FaGraduationCap className="text-xl text-blue-400" />
+                Education
+              </h4>
+
+              <div className="space-y-8">
+                {/* Masters */}
+                <div className="relative pl-4 border-l-2 border-blue-500/30">
+                  <div className="font-bold text-white">
+                    M.S. Computer Science
+                  </div>
+                  <div className="text-sm text-slate-400">
+                    Stevens Institute of Technology
+                  </div>
+                  <div className="mt-1 font-mono text-xs text-blue-400">
+                    3.97 GPA • 2025
+                  </div>
+                  <div className="flex items-start gap-1.5 mt-2 text-xs text-slate-300">
+                    <FaAward className="text-yellow-500 shrink-0 mt-0.5" />
+                    <span>Provost&apos;s Merit Scholarship ($14k)</span>
+                  </div>
+                </div>
+
+                {/* MTech */}
+                <div className="relative pl-4 border-l-2 border-slate-700">
+                  <div className="font-bold text-white">
+                    M.Tech Construction & Management
+                  </div>
+                  <div className="text-sm text-slate-400">
+                    College of Engineering, Pune
+                  </div>
+                  <div className="mt-1 font-mono text-xs text-slate-500">
+                    2015
+                  </div>
+                  <div className="flex flex-col gap-1 mt-2 text-xs text-slate-400">
+                    <div className="flex items-start gap-1.5">
+                      <FaAward className="text-yellow-500 shrink-0 mt-0.5" />
+                      <span>AICTE Research Scholar</span>
+                    </div>
+                    <div className="leading-tight text-slate-500">
+                      Thesis: Cost Overrun Analysis via Principal Component
+                      Analysis
+                    </div>
+                  </div>
+                </div>
+
+                {/* BTech */}
+                <div className="relative pl-4 border-l-2 border-slate-700">
+                  <div className="font-bold text-white">
+                    B.Tech Civil Engineering
+                  </div>
+                  <div className="text-sm text-slate-400">
+                    Dr. B. A. M. U. , Aurangabad
+                  </div>
+                  <div className="mt-1 font-mono text-xs text-slate-500">
+                    2012
+                  </div>
+                  <div className="flex flex-col gap-1 mt-2 text-xs text-slate-400">
+                    <div className="flex items-start gap-1.5">
+                      <FaAward className="text-yellow-500 shrink-0 mt-0.5" />
+                      <span className="text-slate-300">
+                        Rank #1 in University
+                      </span>
+                    </div>
+                    <div className="leading-tight text-slate-500">
+                      General Secretary, Student Council
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Connect Card with Socials */}
             <div className="p-6 border bg-slate-800/50 border-slate-700 rounded-2xl transition-all duration-300 hover:border-blue-500/50 hover:scale-[1.02]">

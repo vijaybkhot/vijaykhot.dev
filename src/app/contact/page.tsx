@@ -48,9 +48,9 @@ export default function ContactPage() {
         </h1>
 
         <p className="mb-4 text-sm leading-relaxed text-center text-slate-300">
-          Whether you are a recruiter with an opportunity, a developer looking
-          to collaborate, or just want to say hi — I would love to hear from
-          you.
+          I am currently open to Backend and ML Infrastructure roles,
+          particularly in the ConTech or PropTech space. If you have an
+          engineering challenge or an opportunity to discuss, please reach out.
         </p>
 
         <form

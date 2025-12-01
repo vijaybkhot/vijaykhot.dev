@@ -11,9 +11,9 @@ export default function PageTransition({
   const pathname = usePathname();
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
       <AnimatePresence mode="wait">
-        <div className="relative overflow-hidden shadow-xl shadow-black/10 rounded-xl">
+        <div className="relative shadow-xl shadow-black/10 rounded-xl">
           <motion.div
             key={pathname}
             initial={{

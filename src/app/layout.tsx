@@ -54,7 +54,9 @@ export default function RootLayout({
             <PageTransition>{children}</PageTransition>
           </main>
 
-          <Footer />
+          <footer className="relative z-20">
+            <Footer />
+          </footer>
         </div>
         {/* Analytics  */}
         <Analytics />

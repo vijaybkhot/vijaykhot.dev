@@ -41,7 +41,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)] px-4 pt-8">
+    <main className="flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-4 pt-20">
       <div className="w-full max-w-md ">
         <h1 className="mb-1.5 text-3xl font-bold text-center text-blue-500 sm:text-3xl">
           Get in Touch

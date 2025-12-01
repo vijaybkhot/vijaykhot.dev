@@ -25,6 +25,7 @@ export const projects = [
     live: "",
     youtube: "",
     labels: ["Backend", "Worker", "Compliance", "ConTech", "AEC", "PermitTech"],
+    architecture: true,
   },
   {
     title: "Material Forecasting Engine",
@@ -52,6 +53,7 @@ export const projects = [
     youtube:
       "https://www.youtube.com/embed/NEc9YYhIxww?si=N3MGX7sPXw8v_Zgm&rel=0",
     labels: ["Solo Project", "MVP", "In Progress"],
+    architecture: true,
   },
 
   {

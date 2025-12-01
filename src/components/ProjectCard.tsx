@@ -20,6 +20,7 @@ type Project = {
   featured?: boolean;
   courseProject?: boolean;
   labels?: string[];
+  architecture?: boolean;
 };
 
 const ProjectCard: FC<{ project: Project }> = ({ project }) => {
@@ -291,7 +292,8 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
             {/* Hover Overlay with "Expand" Hint */}
             <div className="absolute inset-0 flex items-center justify-center transition-colors duration-300 opacity-0 bg-black/0 group-hover:bg-black/20 group-hover:opacity-100">
               <div className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-white transition-transform transform translate-y-2 border rounded-full shadow-xl bg-slate-900/80 backdrop-blur border-slate-600 group-hover:translate-y-0">
-                <FaExpand /> View Architecture
+                <FaExpand />{" "}
+                {project.architecture ? "View Architecture" : "View Image"}
               </div>
             </div>
           </div>

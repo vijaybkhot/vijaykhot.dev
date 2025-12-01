@@ -21,6 +21,7 @@ type Project = {
   courseProject?: boolean;
   labels?: string[];
   architecture?: boolean;
+  apiDocs?: string;
 };
 
 const ProjectCard: FC<{ project: Project }> = ({ project }) => {
@@ -424,6 +425,13 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
               <ButtonLink
                 href={project.youtube || project.embed || ""}
                 label="Watch Walkthrough"
+                variant="outlined"
+              />
+            )}
+            {project.apiDocs && (
+              <ButtonLink
+                href={project.apiDocs}
+                label="API Docs"
                 variant="outlined"
               />
             )}

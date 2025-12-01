@@ -28,10 +28,10 @@ export const projects = [
     architecture: true,
   },
   {
-    title: "Material Forecasting Engine",
+    title: "Material Price Forecasting Engine",
     featured: true,
     description:
-      "Time-series forecasting service for materials: historical series storage plus model-based forecasts and cached responses.",
+      "Time-series forecasting service for material costs: historical series storage plus model-based forecasts and cached responses.",
     contribution:
       "Built a FastAPI backend with Redis caching, Alembic migrations, and a Next.js App Router frontend. Implemented Docker + docker-compose for local dev, CI with GitHub Actions, and deployments to Heroku, Vercel, and an AWS ECS pipeline (ECR/ALB/ECS). Resolved DB, Alembic and build-time environment issues during production deploys.",
     tech: [
@@ -54,6 +54,7 @@ export const projects = [
       "https://www.youtube.com/embed/NEc9YYhIxww?si=N3MGX7sPXw8v_Zgm&rel=0",
     labels: ["Solo Project", "MVP", "In Progress"],
     architecture: true,
+    apiDocs: "https://constrisk-api-96f05a1f5ba2.herokuapp.com/docs",
   },
 
   {

@@ -34,8 +34,8 @@ const Hero = () => {
 
       {/* 4. Supporting Text */}
       <p className="mb-4 text-xs leading-relaxed sm:text-sm text-slate-400">
-        My core stack is <strong>Python (FastAPI)</strong>,{" "}
-        <strong>Node.js (Fastify)</strong>, <strong>AWS</strong>, and{" "}
+        My core stack is <strong>Node.js (TypeScript)</strong>,{" "}
+        <strong>Python (FastAPI)</strong>, <strong>AWS</strong>, and{" "}
         <strong>Docker</strong>. I turn messy, real-world workflows into
         reliable APIs and data pipelines.
       </p>
@@ -43,7 +43,7 @@ const Hero = () => {
       {/* 5. The 3-Bullet List - Stack on mobile, grid on desktop */}
       <div className="flex flex-col gap-2 mb-4 text-left sm:grid sm:grid-cols-3">
         <div className="p-3 transition-colors border rounded-lg bg-slate-800/50 border-slate-700 hover:border-blue-500/50">
-          <h3 className="mb-1 font-semibold text-white text-sm">
+          <h3 className="mb-1 text-sm font-semibold text-white">
             Backend &amp; APIs
           </h3>
           <p className="text-xs text-slate-400">
@@ -51,7 +51,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="p-3 transition-colors border rounded-lg bg-slate-800/50 border-slate-700 hover:border-blue-500/50">
-          <h3 className="mb-1 font-semibold text-white text-sm">
+          <h3 className="mb-1 text-sm font-semibold text-white">
             ML in Production
           </h3>
           <p className="text-xs text-slate-400">
@@ -59,7 +59,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="p-3 transition-colors border rounded-lg bg-slate-800/50 border-slate-700 hover:border-blue-500/50">
-          <h3 className="mb-1 font-semibold text-white text-sm">
+          <h3 className="mb-1 text-sm font-semibold text-white">
             Construction-Aware
           </h3>
           <p className="text-xs text-slate-400">

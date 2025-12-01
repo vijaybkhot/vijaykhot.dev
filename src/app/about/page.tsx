@@ -126,50 +126,7 @@ export default function AboutPage() {
 
           {/* Sidebar: Stats & Resume */}
           <div className="flex flex-col gap-6">
-            {/* LeetCode Knight Badge */}
-            <a
-              href="https://leetcode.com/u/vijay_khot/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-6 transition-all duration-300 border shadow-xl bg-slate-800/50 border-slate-700 rounded-2xl hover:border-yellow-500/50 hover:scale-[1.02] cursor-pointer block group"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2 text-lg font-bold text-white">
-                  <SiLeetcode className="text-[#FFA116] text-2xl" />
-                  LeetCode
-                </div>
-                <span className="px-2 py-1 text-xs font-bold text-slate-900 bg-[#FFA116] rounded">
-                  Top 0.4%
-                </span>
-              </div>
-
-              <div className="flex items-center gap-4 mb-2">
-                <div className="p-3 border rounded-full bg-slate-900 border-slate-700">
-                  <FaChessKnight className="text-3xl text-yellow-500" />
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-white">Knight</div>
-                  <div className="text-sm text-slate-400">Badge Earned</div>
-                </div>
-              </div>
-
-              <div className="pt-4 mt-4 border-t border-slate-700">
-                <div className="flex justify-between text-sm">
-                  <span className="text-slate-400">Problems Solved</span>
-                  <span className="font-mono font-bold text-white">650+</span>
-                </div>
-              </div>
-
-              {/* Subtle CTA */}
-              <div className="flex items-center justify-center gap-1 pt-3 mt-3 text-xs text-slate-500 group-hover:text-yellow-500/80">
-                <span>View Profile</span>
-                <span className="transition-transform group-hover:translate-x-0.5">
-                  →
-                </span>
-              </div>
-            </a>
-
-            {/* Education Card (Updated with Impact) */}
+            {/* Education Card */}
             <div className="p-6 transition-all duration-300 border shadow-xl bg-slate-800/50 border-slate-700 rounded-2xl hover:border-blue-500/50 hover:scale-[1.02]">
               <h4 className="flex items-center gap-2 mb-6 font-semibold text-white">
                 <FaGraduationCap className="text-xl text-blue-400" />
@@ -242,6 +199,47 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
+            {/* LeetCode Knight Badge */}
+            <a
+              href="https://leetcode.com/u/vijay_khot/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-6 transition-all duration-300 border shadow-xl bg-slate-800/50 border-slate-700 rounded-2xl hover:border-yellow-500/50 hover:scale-[1.02] cursor-pointer block group"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2 text-lg font-bold text-white">
+                  <SiLeetcode className="text-[#FFA116] text-2xl" />
+                  LeetCode
+                </div>
+                <span className="px-2 py-1 text-xs font-bold text-slate-900 bg-[#FFA116] rounded">
+                  Top 0.4%
+                </span>
+              </div>
+
+              <div className="flex items-center gap-4 mb-2">
+                <div className="p-3 border rounded-full bg-slate-900 border-slate-700">
+                  <FaChessKnight className="text-3xl text-yellow-500" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-white">Knight</div>
+                  <div className="text-sm text-slate-400">Badge Earned</div>
+                </div>
+              </div>
+
+              <div className="pt-4 mt-4 border-t border-slate-700">
+                <div className="flex justify-between text-sm">
+                  <span className="text-slate-400">Problems Solved</span>
+                  <span className="font-mono font-bold text-white">650+</span>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center gap-1 pt-3 mt-3 text-xs text-slate-500 group-hover:text-yellow-500/80">
+                <span>View Profile</span>
+                <span className="transition-transform group-hover:translate-x-0.5">
+                  →
+                </span>
+              </div>
+            </a>
 
             {/* Connect Card with Socials */}
             <div className="p-6 border bg-slate-800/50 border-slate-700 rounded-2xl transition-all duration-300 hover:border-blue-500/50 hover:scale-[1.02]">

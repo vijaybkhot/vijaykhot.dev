@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`h-full bg-[#0f172a] text-white ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="relative flex flex-col min-h-screen overflow-hidden">
+        <div className="relative flex flex-col min-h-screen">
           {/* --- THE SYSTEMS BLUEPRINT BACKGROUND --- */}
           <div className="fixed inset-0 z-0 pointer-events-none">
             {/* 1. Base Dark Background */}

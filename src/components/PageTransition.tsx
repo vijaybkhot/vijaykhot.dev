@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function PageTransition({
   children,
@@ -9,6 +10,11 @@ export default function PageTransition({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+
+  // Scroll to top on page load/navigation
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div className="relative">

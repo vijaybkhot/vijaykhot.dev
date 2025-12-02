@@ -20,8 +20,21 @@ type Project = {
   featured?: boolean;
   courseProject?: boolean;
   labels?: string[];
-  architecture?: boolean;
   apiDocs?: string;
+};
+
+// Helper to render bold text from markdown-style **bold**
+const renderDescription = (text: string) => {
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  return parts.map((part, index) =>
+    part.startsWith("**") && part.endsWith("**") ? (
+      <strong key={index} className="font-semibold text-white">
+        {part.slice(2, -2)}
+      </strong>
+    ) : (
+      part
+    )
+  );
 };
 
 const ProjectCard: FC<{ project: Project }> = ({ project }) => {
@@ -48,14 +61,11 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
   const zoomOut = () => {
     setZoom((z) => {
       const newZoom = Math.max(z - 0.1, 0.5);
-      if (newZoom <= 1) {
-        setPan({ x: 0, y: 0 });
-      }
+      if (newZoom <= 1) setPan({ x: 0, y: 0 });
       return newZoom;
     });
   };
 
-  // Handle drag start
   const handleMouseDown = (e: React.MouseEvent) => {
     if (zoom > 1) {
       e.preventDefault();
@@ -64,30 +74,19 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
     }
   };
 
-  // Handle drag move
   const handleMouseMove = (e: React.MouseEvent) => {
     if (isDragging && zoom > 1) {
-      setPan({
-        x: e.clientX - dragStart.x,
-        y: e.clientY - dragStart.y,
-      });
+      setPan({ x: e.clientX - dragStart.x, y: e.clientY - dragStart.y });
     }
   };
 
-  // Handle drag end
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+  const handleMouseUp = () => setIsDragging(false);
 
-  // Handle modal keyboard controls and body scroll lock
   useEffect(() => {
     if (!isModalOpen) return;
-
-    // Prevent body scroll when modal is open
     document.body.style.overflow = "hidden";
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Zoom controls
       if (e.key === "+" || e.key === "=") {
         e.preventDefault();
         zoomIn();
@@ -98,23 +97,17 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
         zoomOut();
         return;
       }
-      // Close on any other key
       e.preventDefault();
       closeModal();
     };
-
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
-      if (e.deltaY < 0) {
-        zoomIn();
-      } else {
-        zoomOut();
-      }
+      if (e.deltaY < 0) zoomIn();
+      else zoomOut();
     };
 
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("wheel", handleWheel, { passive: false });
-
     return () => {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
@@ -122,7 +115,6 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
     };
   }, [isModalOpen]);
 
-  // Map common label text to Tailwind color classes
   const getLabelClasses = (label: string) => {
     const l = label.toLowerCase();
     if (l.includes("team") || l.includes("group"))
@@ -152,9 +144,7 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
   };
 
   const handleCardClick = () => {
-    if (project.github) {
-      window.open(project.github, "_blank");
-    }
+    if (project.github) window.open(project.github, "_blank");
   };
 
   return (
@@ -164,45 +154,25 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
         project.image &&
         createPortal(
           <div
-            className="z-[100] bg-black/95 backdrop-blur-sm"
+            className="z-[100] bg-black/95 backdrop-blur-sm fixed inset-0 flex items-center justify-center overflow-hidden"
             onClick={closeModal}
-            style={{
-              position: "fixed",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              width: "100vw",
-              height: "100vh",
-              overflow: "hidden",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
           >
-            {/* Close Button */}
             <button
-              className="z-20 text-white transition hover:text-red-400"
-              style={{ position: "fixed", top: "1rem", right: "1rem" }}
+              className="absolute z-20 text-white transition top-4 right-4 hover:text-red-400"
               onClick={(e) => {
                 e.stopPropagation();
                 closeModal();
               }}
-              aria-label="Close"
             >
               <FaTimes size={28} />
             </button>
-
-            {/* Zoom Controls */}
             <div
-              className="z-20 flex gap-2"
-              style={{ position: "fixed", top: "1rem", left: "1rem" }}
+              className="absolute z-20 flex gap-2 top-4 left-4"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 className="flex items-center justify-center w-10 h-10 text-white transition rounded-full bg-slate-800/80 hover:bg-slate-700"
                 onClick={zoomOut}
-                aria-label="Zoom out"
               >
                 <FaSearchMinus size={16} />
               </button>
@@ -212,13 +182,10 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
               <button
                 className="flex items-center justify-center w-10 h-10 text-white transition rounded-full bg-slate-800/80 hover:bg-slate-700"
                 onClick={zoomIn}
-                aria-label="Zoom in"
               >
                 <FaSearchPlus size={16} />
               </button>
             </div>
-
-            {/* Centered Image */}
             <div
               className="pointer-events-auto"
               onClick={(e) => e.stopPropagation()}
@@ -238,45 +205,34 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
                 alt={`${project.title} Architecture`}
                 width={1200}
                 height={800}
-                className="object-contain select-none"
-                style={{
-                  maxWidth: "85vw",
-                  maxHeight: "80vh",
-                  width: "auto",
-                  height: "auto",
-                  pointerEvents: "none",
-                }}
+                className="object-contain select-none pointer-events-none max-w-[85vw] max-h-[80vh] w-auto h-auto"
                 quality={100}
                 priority
                 draggable={false}
               />
             </div>
-
-            {/* Caption */}
-            <div
-              className="z-20 text-center pointer-events-none"
-              style={{ position: "fixed", bottom: "1rem", left: 0, right: 0 }}
-            >
+            <div className="absolute left-0 right-0 z-20 text-center pointer-events-none bottom-4">
               <span className="inline-block px-4 py-2 text-sm text-white border rounded-full bg-black/60 backdrop-blur-md border-white/10">
-                {project.title} — Scroll to zoom
-                {zoom > 1 ? " • Drag to pan" : ""} • Click outside to close
+                {project.title} — Scroll/Pinch to zoom • Drag to pan
               </span>
             </div>
           </div>,
           document.body
         )}
 
-      {/* --- PROJECT CARD --- */}
+      {/* --- PROJECT CARD (Compact Version) --- */}
       <div
         role="button"
         tabIndex={0}
         onClick={handleCardClick}
-        className="flex flex-col h-full bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-blue-400 transition-all duration-300 transform hover:scale-[1.01] hover:shadow-blue-500/20 hover:shadow-lg cursor-pointer group"
+        // Changed p-6 to p-5 for tighter feel
+        className="flex flex-col h-full bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-blue-400 transition-all duration-300 transform hover:scale-[1.01] hover:shadow-blue-500/20 hover:shadow-lg cursor-pointer group"
       >
-        {/* Media Section: Priority Image -> YouTube -> Embed */}
+        {/* Media Section */}
         {project.image ? (
           <div
-            className="relative w-full h-[220px] mb-5 rounded-lg overflow-hidden border border-slate-700/50 bg-slate-900"
+            // Changed h-[220px] to h-[190px] and mb-5 to mb-4
+            className="relative w-full h-[190px] mb-4 rounded-lg overflow-hidden border border-slate-700/50 bg-slate-900"
             onClick={(e) => {
               e.stopPropagation();
               openModal();
@@ -290,38 +246,22 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
               sizes="(max-width: 768px) 100vw, 600px"
               priority={project.featured}
             />
-            {/* Hover Overlay with "Expand" Hint */}
             <div className="absolute inset-0 flex items-center justify-center transition-colors duration-300 opacity-0 bg-black/0 group-hover:bg-black/20 group-hover:opacity-100">
-              <div className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-white transition-transform transform translate-y-2 border rounded-full shadow-xl bg-slate-900/80 backdrop-blur border-slate-600 group-hover:translate-y-0">
-                <FaExpand />{" "}
-                {project.architecture ? "View Architecture" : "View Image"}
+              <div className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold text-white transition-transform transform translate-y-2 border rounded-full shadow-xl bg-slate-900/80 backdrop-blur border-slate-600 group-hover:translate-y-0">
+                <FaExpand /> View Architecture
               </div>
             </div>
           </div>
-        ) : project.youtube ? (
+        ) : project.youtube || project.embed ? (
           <div
-            className="mb-5 overflow-hidden rounded-lg aspect-video"
+            className="mb-4 overflow-hidden rounded-lg aspect-video"
             onClick={(e) => e.stopPropagation()}
           >
             <iframe
-              src={project.youtube}
+              src={project.youtube || project.embed}
               title={`${project.title} demo`}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="w-full h-full"
-            ></iframe>
-          </div>
-        ) : project.embed ? (
-          <div
-            className="mb-5 overflow-hidden rounded-lg aspect-video"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <iframe
-              src={project.embed}
-              title={`${project.title} demo`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
               className="w-full h-full"
             ></iframe>
           </div>
@@ -329,17 +269,16 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
 
         {/* Header */}
         <div className="mb-auto">
-          <h3 className="mb-2 text-xl font-bold text-white transition-colors group-hover:text-blue-400">
+          <h3 className="mb-2 text-lg font-bold leading-tight text-white transition-colors group-hover:text-blue-400">
             {project.title}
           </h3>
 
-          {/* Labels */}
           {project.labels && (
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-1.5 mb-3">
               {project.labels.map((label) => (
                 <span
                   key={label}
-                  className={`inline-block px-2.5 py-0.5 text-[10px] uppercase tracking-wider font-bold rounded-full ${getLabelClasses(
+                  className={`inline-block px-2 py-0.5 text-[9px] uppercase tracking-wider font-bold rounded-full ${getLabelClasses(
                     label
                   )}`}
                 >
@@ -349,32 +288,32 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
             </div>
           )}
 
-          <p
-            className={`text-slate-300 text-sm leading-relaxed mb-4 ${
-              !expanded ? "line-clamp-3" : ""
+          {/* Description with bold support */}
+          <div
+            className={`text-slate-300 text-sm leading-relaxed mb-3 ${
+              !expanded ? "line-clamp-3" : "whitespace-pre-line"
             }`}
           >
-            {project.description}
-          </p>
+            {renderDescription(project.description)}
+          </div>
 
-          {/* Read More Toggle */}
           {project.description.length > 150 && (
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 setExpanded((prev) => !prev);
               }}
-              className="mb-4 text-xs font-bold tracking-wide text-blue-400 uppercase hover:text-blue-300 focus:outline-none"
+              className="mb-3 text-xs font-bold tracking-wide text-blue-400 uppercase hover:text-blue-300 focus:outline-none"
             >
               {expanded ? "Show less" : "Read more"}
             </button>
           )}
 
-          {/* Contribution */}
           {project.contribution && (
-            <div className="p-3 mb-5 border-l-2 rounded bg-slate-800/50 border-blue-500/50">
+            // Reduced padding p-3 to p-2.5
+            <div className="p-2.5 mb-4 border-l-2 rounded bg-slate-800/50 border-blue-500/50">
               <p className="text-xs italic leading-relaxed text-slate-400">
-                <span className="block mb-1 not-italic font-bold text-blue-400">
+                <span className="block mb-0.5 not-italic font-bold text-blue-400">
                   {project.labels?.some((l) => l.includes("Solo"))
                     ? "What I built:"
                     : "My Role:"}
@@ -385,15 +324,14 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
           )}
         </div>
 
-        {/* Footer: Tech & Links */}
+        {/* Footer */}
         <div>
-          {/* Tech Stack Icons */}
-          <div className="flex flex-wrap gap-3 pt-4 mb-6 border-t border-slate-700/50">
+          <div className="flex flex-wrap gap-2.5 pt-3 mb-4 border-t border-slate-700/50">
             {project.tech.map((tech) => {
               const iconObject = icons.find((icon) => icon.name === tech);
               return (
                 <div key={tech} className="relative group/icon" title={tech}>
-                  <div className="text-xl transition-colors text-slate-400 hover:text-white cursor-help">
+                  <div className="text-lg transition-colors text-slate-400 hover:text-white cursor-help">
                     {iconObject?.icon}
                   </div>
                 </div>
@@ -401,13 +339,11 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
             })}
           </div>
 
-          {/* UPDATED Action Buttons */}
           <div
-            className="flex flex-wrap gap-3"
+            className="flex flex-wrap gap-2"
             onClick={(e) => e.stopPropagation()}
           >
             {project.github && (
-              // CHANGED: Primary variant for GitHub
               <ButtonLink
                 href={project.github}
                 label="GitHub"
@@ -421,17 +357,17 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
                 variant="outlined"
               />
             )}
-            {(project.youtube || project.embed) && (
-              <ButtonLink
-                href={project.youtube || project.embed || ""}
-                label="Watch Walkthrough"
-                variant="outlined"
-              />
-            )}
             {project.apiDocs && (
               <ButtonLink
                 href={project.apiDocs}
                 label="API Docs"
+                variant="outlined"
+              />
+            )}
+            {(project.youtube || project.embed) && (
+              <ButtonLink
+                href={project.youtube || project.embed || ""}
+                label="Watch Walkthrough"
                 variant="outlined"
               />
             )}

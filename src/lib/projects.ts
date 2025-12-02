@@ -24,16 +24,32 @@ export const projects = [
     github: "https://github.com/vijaybkhot/permit-workflow-service",
     live: "",
     youtube: "",
-    labels: ["Backend", "Worker", "Compliance", "ConTech", "AEC", "PermitTech"],
+    labels: [
+      "Backend",
+      "Worker",
+      "Compliance",
+      "ConTech",
+      "AEC",
+      "PermitTech",
+      "Solo",
+    ],
     architecture: true,
   },
   {
-    title: "Material Price Forecasting Engine",
+    title: "Material Forecasting Engine",
     featured: true,
-    description:
-      "Time-series forecasting service for material costs: historical series storage plus model-based forecasts and cached responses.",
+    description: `Time-series forecasting service for materials: historical series storage plus model-based forecasts.
+
+**Why this Architecture?**
+I chose Redis to cache inference results, handling high-read loads and reducing API latency for frequent forecasts of static monthly data.
+
+**Future Roadmap (MLOps):**
+• Model Versioning: Implementing a registry (e.g., MLflow or S3 versioning) to track model artifacts and ensure reproducible deployments.
+• Drift Monitoring: Designing a pipeline to track forecast MAPE against actual FRED data releases, triggering automated retraining when accuracy degrades.`,
+
     contribution:
-      "Built a FastAPI backend with Redis caching, Alembic migrations, and a Next.js App Router frontend. Implemented Docker + docker-compose for local dev, CI with GitHub Actions, and deployments to Heroku, Vercel, and an AWS ECS pipeline (ECR/ALB/ECS). Resolved DB, Alembic and build-time environment issues during production deploys.",
+      "Architected the end-to-end ML pipeline, handling data ingestion (ETL), model serving, and caching strategies. Designed the system for extensibility, allowing easy integration of new forecasting models. Implemented Docker + docker-compose for local dev, CI with GitHub Actions, and deployments to AWS ECS.",
+
     tech: [
       "Python",
       "FastAPI",
@@ -54,7 +70,6 @@ export const projects = [
       "https://www.youtube.com/embed/NEc9YYhIxww?si=N3MGX7sPXw8v_Zgm&rel=0",
     labels: ["Solo Project", "MVP", "In Progress"],
     architecture: true,
-    apiDocs: "https://constrisk-api-96f05a1f5ba2.herokuapp.com/docs",
   },
 
   {

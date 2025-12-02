@@ -31,7 +31,7 @@ export const projects = [
       "ConTech",
       "AEC",
       "PermitTech",
-      "Solo",
+      "Solo Project",
     ],
     architecture: true,
   },

@@ -1,4 +1,4 @@
-# vijaykhot.dev
+# vijaykhot.com
 
 Welcome to my personal portfolio website — built with **Next.js 15**, **Tailwind CSS**, and **TypeScript** — where I showcase my work, background, and projects. Designed to be fast, responsive, and easily maintainable, this portfolio highlights who I am as a developer and what I’m passionate about.
 

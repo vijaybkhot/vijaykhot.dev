@@ -78,12 +78,10 @@ I chose Redis to cache inference results, handling high-read loads and reducing 
     description:
       "A robust full-stack platform for personalized email campaigns, contact management, and template-driven outreach. Built for efficiency, scalability, and real-world deliverability.",
     contribution:
-      "Led end-to-end development: architected RESTful APIs, designed service layer, implemented Prisma transactions, and solved critical email deliverability issues (SPF, DKIM, DMARC, AWS SES). Integrated rich text editor, live preview, dynamic placeholders, and campaign management. Migrated email infrastructure for sender reputation and production readiness.",
+      "Led end-to-end development: architected RESTful APIs and implemented Prisma transactions. Solved critical email deliverability issues by configuring AWS SES with SPF, DKIM, and DMARC records to ensure high sender reputation and prevent spam flagging.",
     tech: [
       "Next.js",
-      "React",
       "TypeScript",
-      "Node.js",
       "PostgreSQL",
       "Prisma",
       "AWS SES",
@@ -91,11 +89,12 @@ I chose Redis to cache inference results, handling high-read loads and reducing 
       "Docker",
       "Jest",
     ],
-    image: "/projects/outreachly.png",
+    image: "/projects/outreach-architecture.png",
     github: "https://github.com/vijaybkhot/outreach-app",
     live: "",
     youtube: "",
     labels: ["Solo Project", "In Progress", "Email", "Cloud"],
+    architecture: true,
   },
 
   {

@@ -4,7 +4,7 @@ Welcome to my personal portfolio website — built with **Next.js 15**, **Tailwi
 
 ## Live Demo
 
-[https://vijaykhot.dev](https://vijaykhot.dev)
+[https://vijaykhot.com](https://vijaykhot.com)
 
 ## Features
 
@@ -31,10 +31,10 @@ Welcome to my personal portfolio website — built with **Next.js 15**, **Tailwi
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/vijaykhot.dev.git
+git clone https://github.com/vijaybkhot/vijaykhot.com.git
 ```
 ```bash
-cd vijaykhot.dev
+cd vijaykhot.com
 ```
 
 2.	**Install dependencies**

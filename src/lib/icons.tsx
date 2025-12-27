@@ -32,6 +32,17 @@ import {
   SiGithubactions,
   SiHeroku,
   SiAmazon,
+  SiPrometheus,
+  SiGrafana,
+  SiJaeger,
+  SiScikitlearn,
+  SiPandas,
+  SiPydantic,
+  SiSalesforce,
+  SiPhp,
+  SiMake,
+  SiZapier,
+  SiOpentelemetry,
 } from "react-icons/si";
 import {
   FaJava,
@@ -40,6 +51,7 @@ import {
   FaFileCode,
   FaChrome,
   FaDatabase,
+  FaExchangeAlt,
 } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -170,6 +182,16 @@ export const techIcons = [
     icon: <SiRedis className="text-red-500" />,
     featured: true,
   },
+  {
+    name: "SQLAlchemy",
+    icon: <SiPrisma className="text-[#D70E0E]" />,
+    featured: false,
+  },
+  {
+    name: "Pydantic",
+    icon: <SiPydantic className="text-[#E92063]" />,
+    featured: false,
+  },
 
   // Backend frameworks & workers (representative icons)
   {
@@ -193,13 +215,33 @@ export const techIcons = [
     featured: false,
   },
 
-  // DevOps & Cloud
+  // DevOps & Cloud & Observability
   {
     name: "Docker",
     icon: <SiDocker className="text-blue-500" />,
     featured: true,
   },
   { name: "AWS", icon: <FaAws className="text-orange-400" />, featured: true },
+  {
+    name: "Prometheus",
+    icon: <SiPrometheus className="text-[#E6522C]" />,
+    featured: true,
+  },
+  {
+    name: "Grafana",
+    icon: <SiGrafana className="text-[#F46800]" />,
+    featured: false,
+  },
+  {
+    name: "Jaeger",
+    icon: <SiJaeger className="text-[#60D0E4]" />,
+    featured: false,
+  },
+  {
+    name: "OpenTelemetry",
+    icon: <SiOpentelemetry className="text-[#4050B5]" />,
+    featured: false,
+  },
   {
     name: "AWS SES",
     icon: (
@@ -229,6 +271,45 @@ export const techIcons = [
   {
     name: "AWS ECS",
     icon: <SiAmazon className="text-orange-400" />,
+    featured: false,
+  },
+
+  // Data Science & ML
+  {
+    name: "Scikit-learn",
+    icon: <SiScikitlearn className="text-[#F7931E]" />,
+    featured: true,
+  },
+  {
+    name: "Pandas",
+    icon: <SiPandas className="text-[#150458]" />,
+    featured: false,
+  },
+
+  // Enterprise Integration & Automation
+  {
+    name: "Salesforce",
+    icon: <SiSalesforce className="text-[#00A1E0]" />,
+    featured: true,
+  },
+  {
+    name: "PHP",
+    icon: <SiPhp className="text-[#777BB4]" />,
+    featured: false,
+  },
+  {
+    name: "Make",
+    icon: <SiMake className="text-[#00A6D6]" />,
+    featured: false,
+  },
+  {
+    name: "Zapier",
+    icon: <SiZapier className="text-[#FF4F00]" />,
+    featured: false,
+  },
+  {
+    name: "Integrate.io",
+    icon: <FaExchangeAlt className="text-[#4A4A4A]" />,
     featured: false,
   },
 

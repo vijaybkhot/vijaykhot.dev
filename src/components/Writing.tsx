@@ -5,6 +5,26 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 const articles = [
   {
+    title: "Building Production-Grade Idempotency with Redis & Fastify",
+    platform: "Medium",
+    icon: <FaMedium />,
+    // Update link to your actual article
+    link: "https://medium.com/javascript-in-plain-english/building-production-grade-idempotency-with-node-js-fastify-and-redis-4876de266222",
+    date: "Dec 2025",
+    description:
+      "A deep dive into distributed state management, handling race conditions, and implementing the 'Check-Then-Act' pattern using Redis locking.",
+  },
+  {
+    title: "Decoupling ML Artifacts: A Pattern for S3 Model Storage",
+    platform: "Medium",
+    icon: <FaMedium />,
+    // Update link to your actual article
+    link: "https://medium.com/aws-tip/decoupling-ml-artifacts-a-pattern-for-s3-based-model-storage-in-production-cbe89d042ee1",
+    date: "Dec 2025",
+    description:
+      "Architecting a clean separation between code and model weights. Strategies for versioning, fetching, and caching ML artifacts in production.",
+  },
+  {
     title: "Testing the Untestable: Integration Testing BullMQ Jobs",
     platform: "Medium",
     icon: <FaMedium />,
@@ -12,26 +32,6 @@ const articles = [
     date: "Oct 2025",
     description:
       "A practical guide to handling the complexity of testing asynchronous job queues, ensuring reliability in distributed message-based architectures.",
-  },
-  {
-    title:
-      "Your Application is Talking. Are You Listening? (Prometheus Metrics)",
-    platform: "Medium",
-    icon: <FaMedium />,
-    link: "https://medium.com/@vijaysinh.khot/your-application-is-talking-are-you-listening-a-beginners-guide-to-metrics-with-prometheus-3780f5ae7d2a",
-    date: "Oct 2025",
-    description:
-      "Setting up observability pipelines to scrape, store, and visualize application metrics using Prometheus, shifting from 'guessing' to 'monitoring'.",
-  },
-  {
-    title:
-      "AWS gave me a bill, but DevOps gave me a lesson! (Cost Optimization)",
-    platform: "Medium",
-    icon: <FaMedium />,
-    link: "https://medium.com/@vijaysinh.khot/aws-gave-me-a-bill-but-devops-gave-me-a-lesson-from-costly-to-0-free-deployment-9fb0bcb2ddea",
-    date: "Nov 2025",
-    description:
-      "How I refactored a deployment pipeline to slash cloud costs to $0, leveraging modern DevOps practices and infrastructure decisions.",
   },
 ];
 

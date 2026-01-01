@@ -4,8 +4,8 @@ import ButtonLink from "@/components/ButtonLink";
 import {
   FaChessKnight,
   FaServer,
-  FaHardHat,
-  FaCodeBranch,
+  FaRoad,
+  FaPuzzlePiece,
   FaGithub,
   FaLinkedin,
   FaMedium,
@@ -17,189 +17,111 @@ import { SiLeetcode } from "react-icons/si";
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#0f172a] text-slate-100 pb-20">
-      <section className="max-w-4xl px-6 py-20 mx-auto">
+      <section className="max-w-5xl px-6 py-20 mx-auto">
         {/* Header */}
         <h1 className="mb-6 text-4xl font-extrabold text-white sm:text-5xl">
           From Concrete to Code.
         </h1>
-        <h2 className="max-w-2xl mb-12 text-xl font-medium leading-relaxed text-slate-300">
-          I apply the engineering rigor of large-scale construction to building
-          fault-tolerant backend systems and ML infrastructure.
+        <h2 className="max-w-3xl mb-12 text-xl font-medium leading-relaxed text-slate-300">
+          I am a Backend and ML Infrastructure Engineer bringing 7+ years of
+          engineering operations experience to software development.
         </h2>
 
         <div className="grid gap-12 md:grid-cols-[2fr_1fr]">
           {/* Main Narrative Column */}
-          <div className="space-y-10">
-            {/* Section 1: Engineering Philosophy */}
+          <div className="space-y-12">
+            {/* Section 1: The Origin & Pivot */}
             <div>
               <h3 className="flex items-center gap-3 mb-4 text-2xl font-bold text-blue-400">
-                <FaHardHat className="text-xl" />
-                The Engineering Philosophy
+                <FaRoad className="text-xl" />
+                The Pivot: Why I Stopped Watching
               </h3>
               <p className="text-lg leading-relaxed text-slate-300">
-                For seven years, I worked as a project engineer on
-                government-subsidized affordable housing, coordinating the
-                construction of more than 600 homes across multiple sites. In
-                construction, you can&apos;t simply &quot;revert&quot; a
-                structural error. A single oversight triggers cascading schedule
-                overruns and budget explosions. I bring that same high-stakes
-                accountability to software engineering.
+                Before earning my M.S. in Computer Science, I spent seven years
+                as a Project Engineer managing large-scale housing projects. I
+                saw the technological innovations transforming other industries
+                -- automation, data pipelines, predictive modeling -- and felt
+                that construction was just beginning to catch up.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-slate-300">
-                I don&apos;t just write code that works; I design systems that
-                survive failure. Whether it&apos;s handling race conditions in a
-                database or managing distributed state, I focus on constraints,
-                safety, and reliability.
+                I realized I didn&apos;t just want to watch that transformation
+                happen;{" "}
+                <strong>I wanted to be the one building the solutions.</strong>{" "}
+                That shift drove me to fully transition into engineering robust
+                backend systems and ML pipelines.
               </p>
             </div>
 
-            {/* Section 2: Current Focus (ML Infra) */}
+            {/* Section 2: Operational Grit */}
+            <div>
+              <h3 className="flex items-center gap-3 mb-4 text-2xl font-bold text-blue-400">
+                <FaPuzzlePiece className="text-xl" />
+                Operational Grit & Resourceful Ownership
+              </h3>
+              <p className="text-lg leading-relaxed text-slate-300">
+                My background in engineering operations taught me that
+                engineering isn&apos;t just about writing code -- it&apos;s
+                about solving bottlenecks under constraints. Whether
+                volunteering for non-profits like <strong>JerseySTEM</strong>{" "}
+                and <strong>The Chad Foundation</strong> or building personal
+                projects, I focus on end-to-end ownership.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-slate-300">
+                I don&apos;t just reach for the most expensive tool. I design
+                systems that solve real -- world problems efficiently -- often
+                figuring out the best possible solution within limited resource
+                constraints.
+              </p>
+            </div>
+
+            {/* Section 3: Technical Expertise */}
             <div>
               <h3 className="flex items-center gap-3 mb-4 text-2xl font-bold text-blue-400">
                 <FaServer className="text-xl" />
-                Current Focus: ML Infrastructure
+                What I Build Today
               </h3>
-              <p className="text-lg leading-relaxed text-slate-300">
-                I realized that the biggest bottleneck in AI isn&apos;t the
-                model, it&apos;s the <strong>pipeline</strong>. I&apos;m focused
-                on building the plumbing that makes models production-ready:
-                data ingestion, storage, serving, and monitoring.
+              <p className="mb-6 text-lg leading-relaxed text-slate-300">
+                I combine operational grit with software architecture to build
+                reliable infrastructure. My recent work includes:
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-slate-300">
-                In practice, this means building systems like my{" "}
-                <strong>Material Forecasting Engine</strong>: ingesting messy
-                economic time-series data into PostgreSQL, serving ARIMA-based
-                forecasts via <strong>FastAPI</strong>, caching responses in{" "}
-                <strong>Redis</strong>, and packaging everything in{" "}
-                <strong>Docker</strong> for reliable deployment.
-              </p>
-            </div>
-
-            {/* Section 3: What I'm Building (The Proof) */}
-            <div>
-              <h3 className="flex items-center gap-3 mb-4 text-2xl font-bold text-blue-400">
-                <FaCodeBranch className="text-xl" />
-                What I&apos;ve Built Recently
-              </h3>
               <ul className="pl-5 space-y-4 text-lg leading-relaxed list-disc text-slate-300 marker:text-blue-500">
                 <li>
                   <strong className="text-white">
                     Material Forecasting Engine:
                   </strong>{" "}
-                  An end-to-end ML pipeline using Python (FastAPI), PostgreSQL,
-                  Redis, and Docker to predict construction material costs.
+                  An AI-driven pipeline (Python/FastAPI/Docker) tackling
+                  construction pricing volatility.
                 </li>
                 <li>
                   <strong className="text-white">
                     Permit Workflow Service:
                   </strong>{" "}
-                  A Node.js/TypeScript backend that encodes complex permit
-                  lifecycles into a guarded state machine with async PDF
-                  generation workers.
+                  A backend service (Node.js/TypeScript) modeling complex
+                  municipal compliance lifecycles.
                 </li>
                 <li>
-                  <strong className="text-white">
-                    Email Outreach Platform:
-                  </strong>{" "}
-                  A full-stack system leveraging AWS SES for production-grade
-                  email deliverability and authentication (SPF/DKIM).
+                  <strong className="text-white">Integration Pipelines:</strong>{" "}
+                  Architecting cost-effective data syncs (Make.com/Integrate.io)
+                  that drastically reduce API costs for non-profits.
                 </li>
               </ul>
+            </div>
 
-              {/* NEW: Writing/Communication Section */}
-              <p className="pt-6 mt-8 text-lg leading-relaxed border-t text-slate-300 border-slate-700">
-                I also document what I learn and build, writing about backend
-                architecture, data pipelines, and real-world debugging stories
-                on{" "}
-                <a
-                  href="https://medium.com/@vijaysinh.khot"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-400 underline hover:text-blue-300 underline-offset-4 decoration-blue-400/30 hover:decoration-blue-400"
-                >
-                  Medium
-                </a>
-                .
+            {/* Section 4: Looking Forward */}
+            <div className="pt-8 border-t border-slate-800">
+              <p className="text-lg italic leading-relaxed text-slate-300">
+                Based in the NYC area (open to relocation). While my background
+                draws me to challenges in{" "}
+                <strong>ConTech, PropTech, and AEC</strong>, I am passionate
+                about any role where I can build reliable backend or ML
+                infrastructure.
               </p>
             </div>
           </div>
 
           {/* Sidebar: Stats & Resume */}
           <div className="flex flex-col gap-6">
-            {/* Education Card */}
-            <div className="p-6 transition-all duration-300 border shadow-xl bg-slate-800/50 border-slate-700 rounded-2xl hover:border-blue-500/50 hover:scale-[1.02]">
-              <h4 className="flex items-center gap-2 mb-6 font-semibold text-white">
-                <FaGraduationCap className="text-xl text-blue-400" />
-                Education
-              </h4>
-
-              <div className="space-y-8">
-                {/* Masters */}
-                <div className="relative pl-4 border-l-2 border-blue-500/30">
-                  <div className="font-bold text-white">
-                    M.S. Computer Science
-                  </div>
-                  <div className="text-sm text-slate-400">
-                    Stevens Institute of Technology
-                  </div>
-                  <div className="mt-1 font-mono text-xs text-blue-400">
-                    3.97 GPA • 2025
-                  </div>
-                  <div className="flex items-start gap-1.5 mt-2 text-xs text-slate-300">
-                    <FaAward className="text-yellow-500 shrink-0 mt-0.5" />
-                    <span>Provost&apos;s Merit Scholarship ($14k)</span>
-                  </div>
-                </div>
-
-                {/* MTech */}
-                <div className="relative pl-4 border-l-2 border-slate-700">
-                  <div className="font-bold text-white">
-                    M.Tech Construction & Management
-                  </div>
-                  <div className="text-sm text-slate-400">
-                    College of Engineering, Pune
-                  </div>
-                  <div className="mt-1 font-mono text-xs text-slate-500">
-                    2015
-                  </div>
-                  <div className="flex flex-col gap-1 mt-2 text-xs text-slate-400">
-                    <div className="flex items-start gap-1.5">
-                      <FaAward className="text-yellow-500 shrink-0 mt-0.5" />
-                      <span>AICTE Research Scholar</span>
-                    </div>
-                    <div className="leading-tight text-slate-500">
-                      Thesis: Cost Overrun Analysis via Principal Component
-                      Analysis
-                    </div>
-                  </div>
-                </div>
-
-                {/* BTech */}
-                <div className="relative pl-4 border-l-2 border-slate-700">
-                  <div className="font-bold text-white">
-                    B.Tech Civil Engineering
-                  </div>
-                  <div className="text-sm text-slate-400">
-                    Dr. B. A. M. U. , Aurangabad
-                  </div>
-                  <div className="mt-1 font-mono text-xs text-slate-500">
-                    2012
-                  </div>
-                  <div className="flex flex-col gap-1 mt-2 text-xs text-slate-400">
-                    <div className="flex items-start gap-1.5">
-                      <FaAward className="text-yellow-500 shrink-0 mt-0.5" />
-                      <span className="text-slate-300">
-                        Rank #1 in University
-                      </span>
-                    </div>
-                    <div className="leading-tight text-slate-500">
-                      General Secretary, Student Council
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* LeetCode Knight Badge */}
+            {/* LeetCode Knight Badge (Top Proof of Skill) */}
             <a
               href="https://leetcode.com/u/vijay_khot/"
               target="_blank"
@@ -241,7 +163,62 @@ export default function AboutPage() {
               </div>
             </a>
 
-            {/* Connect Card with Socials */}
+            {/* Education Card */}
+            <div className="p-6 transition-all duration-300 border shadow-xl bg-slate-800/50 border-slate-700 rounded-2xl hover:border-blue-500/50 hover:scale-[1.02]">
+              <h4 className="flex items-center gap-2 mb-6 font-semibold text-white">
+                <FaGraduationCap className="text-xl text-blue-400" />
+                Education
+              </h4>
+
+              <div className="space-y-8">
+                {/* Masters */}
+                <div className="relative pl-4 border-l-2 border-blue-500/30">
+                  <div className="font-bold text-white">
+                    M.S. Computer Science
+                  </div>
+                  <div className="text-sm text-slate-400">
+                    Stevens Institute of Technology
+                  </div>
+                  <div className="mt-1 font-mono text-xs text-blue-400">
+                    3.97 GPA • 2025
+                  </div>
+                  <div className="flex items-start gap-1.5 mt-2 text-xs text-slate-300">
+                    <FaAward className="text-yellow-500 shrink-0 mt-0.5" />
+                    <span>Provost&apos;s Merit Scholarship</span>
+                  </div>
+                </div>
+
+                {/* MTech */}
+                <div className="relative pl-4 border-l-2 border-slate-700">
+                  <div className="font-bold text-white">
+                    M.Tech Const. & Mgmt.
+                  </div>
+                  <div className="text-sm text-slate-400">
+                    College of Engineering, Pune
+                  </div>
+                  <div className="mt-1 font-mono text-xs text-slate-500">
+                    2015
+                  </div>
+                </div>
+
+                {/* BTech */}
+                <div className="relative pl-4 border-l-2 border-slate-700">
+                  <div className="font-bold text-white">
+                    B.Tech Civil Engineering
+                  </div>
+                  <div className="text-sm text-slate-400">Dr. B. A. M. U.</div>
+                  <div className="mt-1 font-mono text-xs text-slate-500">
+                    2012
+                  </div>
+                  <div className="flex items-start gap-1.5 mt-2 text-xs text-slate-400">
+                    <FaAward className="text-yellow-500 shrink-0 mt-0.5" />
+                    <span>Rank #1 in University</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Connect Card */}
             <div className="p-6 border bg-slate-800/50 border-slate-700 rounded-2xl transition-all duration-300 hover:border-blue-500/50 hover:scale-[1.02]">
               <h4 className="mb-4 font-semibold text-white">Connect</h4>
               <div className="flex flex-col gap-3 mb-6">
@@ -257,7 +234,7 @@ export default function AboutPage() {
                 />
               </div>
 
-              {/* Social Icons Row */}
+              {/* Social Icons */}
               <div className="flex justify-center gap-6 pt-6 border-t border-slate-700">
                 <a
                   href="https://github.com/vijaybkhot"

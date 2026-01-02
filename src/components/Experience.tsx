@@ -4,14 +4,14 @@ import { FaBriefcase, FaBuilding } from "react-icons/fa";
 
 const experiences = [
   {
-    role: "Backend Software Developer (Volunteer)",
+    role: "Backend Software Engineer (Volunteer)",
     company: "The Chad Foundation",
     period: "Oct 2025 - Present",
     description:
       "Acting as Technical Lead, I rescued legacy infrastructure by recovering domains and migrating DNS. I architected a zero-cost serverless donation platform using Netlify Functions. To unblock Google and Stripe verification, I engineered a critical email workaround, implemented SPF/DKIM security, and led MVP scope negotiations.",
   },
   {
-    role: "Software Developer (Volunteer)",
+    role: "Software Engineer - Integrations and Automation (Volunteer)",
     company: "JerseySTEM",
     period: "Aug 2025 - Present",
     description:

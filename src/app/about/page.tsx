@@ -68,7 +68,7 @@ export default function AboutPage() {
               </p>
               <p className="mt-4 text-lg leading-relaxed text-slate-300">
                 I don&apos;t just reach for the most expensive tool. I design
-                systems that solve real -- world problems efficiently -- often
+                systems that solve real-world problems efficiently -- often
                 figuring out the best possible solution within limited resource
                 constraints.
               </p>
